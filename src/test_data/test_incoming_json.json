@@ -1,0 +1,130 @@
+{
+    "about": {
+        "id": 0,
+        "name": "Название объединения",
+        "description": "Sed eget consectetur urna, quis tempus ante. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam sagittis dictum posuere. In vel mi id arcu bibendum pretium. Nunc placerat sapien eget sem pulvinar aliquet. Pellentesque consectetur nisi at nulla auctor, quis mattis tortor convallis. Ut euismod diam in libero volutpat, eget ultricies erat ullamcorper.",
+        "logo": "src/assets/images/homa.jpg"
+    },
+    "events": [
+        {
+            "id": 1,
+            "name": "Мероприятие 1",
+            "short_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus",
+            "long_description":  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula, ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula, ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula, ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus",
+            "logo": "src/assets/images/homa.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Мероприятие 2",
+            "short_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus",
+            "long_description":  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula, ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula, ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula, ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus",
+            "logo": "src/assets/images/homa.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Мероприятие 3",
+            "short_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus",
+            "long_description":  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula, ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula, ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula, ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus",
+            "logo": "src/assets/images/homa.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Мероприятие 4",
+            "short_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus",
+            "long_description":  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula, ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula, ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula, ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus",
+            "logo": "src/assets/images/homa.jpg"
+        }
+    ],
+    "gallery": [
+        {
+            "id": 0,
+            "name": "Соревнование 1",
+            "description": "Краткое описание соревнований 1",
+            "logo": "src/assets/images/homa.jpg",
+            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+            "id": 0,
+            "name": "Соревнование 2",
+            "description": "Краткое описание соревнований 2",
+            "logo": "src/assets/images/homa.jpg",
+            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+            "id": 0,
+            "name": "Соревнование 3",
+            "description": "Краткое описание соревнований 3",
+            "logo": "src/assets/images/homa.jpg",
+            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+            "id": 0,
+            "name": "Соревнование 4",
+            "description": "Краткое описание соревнований 4",
+            "logo": "src/assets/images/homa.jpg",
+            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+            "id": 0,
+            "name": "Соревнование 5",
+            "description": "Краткое описание соревнований 5",
+            "logo": "src/assets/images/homa.jpg",
+            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        }
+    ],
+    "partners": [
+        {
+            "id": 0,
+            "name": "Название партнёра 1",
+            "description": "Краткое описание партнёра 1",
+            "logo": "src/assets/images/homa.jpg",
+            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+            "id": 0,
+            "name": "Название партнёра 2",
+            "description": "Краткое описание партнёра 2",
+            "logo": "src/assets/images/homa.jpg",
+            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+            "id": 0,
+            "name": "Название партнёра 3",
+            "description": "Краткое описание партнёра 3",
+            "logo": "src/assets/images/homa.jpg",
+            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        }
+    ],
+    "socialmedias": [
+        {
+            "id": 0,
+            "name": "Какой-то инфоресурс 1",
+            "description": "Описание какого-то инфоресурса 1",
+            "logo": "src/assets/images/homa.jpg",
+            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+            "id": 0,
+            "name": "Какой-то инфоресурс 2",
+            "description": "Описание какого-то инфоресурса 2",
+            "logo": "src/assets/images/homa.jpg",
+            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        }
+    ],
+    "contacts": [
+        {
+            "id": 0,
+            "name": "Контакт человека 1",
+            "description": "Краткое описание контакта 1",
+            "logo": "src/assets/images/homa.jpg",
+            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+            "id": 0,
+            "name": "Контакт человека 2",
+            "description": "Краткое описание контакта 1",
+            "logo": "src/assets/images/homa.jpg",
+            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        }
+    ]
+}
