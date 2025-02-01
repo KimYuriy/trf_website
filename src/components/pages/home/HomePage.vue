@@ -58,7 +58,12 @@ const data = new AllDataModel(testJson as IAllData);
 const scrollToSection = (sectionId: string) => {
   const element = document.getElementById(sectionId);
   if (element) {
-    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+    const offsetPosition = elementPosition - 100;
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth',
+    });
   }
-}
+};
 </script>

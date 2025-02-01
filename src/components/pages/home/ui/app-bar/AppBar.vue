@@ -27,6 +27,7 @@ const titles = [
   { id: "events", text: 'Мероприятия' },
   { id: "gallery", text: 'Галерея' },
   { id: "partners", text: 'Партнёры' },
+  { id: "social", text: 'Соц.сети' },
   { id: "contacts", text: 'Контакты' }
 ];
 

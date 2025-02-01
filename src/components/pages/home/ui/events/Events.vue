@@ -6,12 +6,10 @@
         v-for="event in events"
         height="250"
         :src="event.logo"
-        @click="scrollToEvent(event.id)"
       />
     </v-row>
     <event-card
       v-for="(event, index) in events"
-      :id="event.id"
       :event="event"
       :index="index"
     />
@@ -26,11 +24,4 @@ import CustomTitle from '@/components/pages/home/ui/common/CustomTitle.vue';
 defineProps<{
   events: DataLong[]
 }>();
-
-const scrollToEvent = (id: number) => {
-  const element = document.getElementById(id.toString());
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
-}
 </script>
