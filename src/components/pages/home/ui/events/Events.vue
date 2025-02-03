@@ -6,10 +6,12 @@
         v-for="event in events"
         height="250"
         :src="event.logo"
+        @click="scrollToEvent(event.id)"
       />
     </v-row>
     <event-card
       v-for="(event, index) in events"
+      :id="event.id"
       :event="event"
       :index="index"
     />
@@ -24,4 +26,16 @@ import CustomTitle from '@/components/pages/home/ui/common/CustomTitle.vue';
 defineProps<{
   events: DataLong[]
 }>();
+
+const scrollToEvent = (sectionId: number) => {
+  const element = document.getElementById(sectionId.toString());
+  if (element) {
+    const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+    const offsetPosition = elementPosition - 70;
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth',
+    });
+  }
+};
 </script>

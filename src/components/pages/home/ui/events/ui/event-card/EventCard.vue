@@ -1,38 +1,39 @@
 <template>
-  <v-dialog max-width="800">
-    <template #activator="{ props: activatorProps }">
-      <v-card
-        v-bind="activatorProps"
-        class="d-flex justify-space-between my-5"
-        :class="index % 2 === 0 ? '' : 'flex-row-reverse'"
-        variant="text"
+  <div>
+    <v-card
+      class="d-flex justify-space-between my-5"
+      :class="index % 2 === 0 ? '' : 'flex-row-reverse'"
+      variant="text"
+      @click="dialog = true"
+    >
+      <v-avatar
+        :class="index % 2 === 0 ? 'mr-5' : 'ml-5'"
+        rounded="0"
+        size="250"
       >
-        <v-avatar
-          :class="index % 2 === 0 ? 'mr-5' : 'ml-5'"
-          rounded="0"
-          size="250"
-        >
-          <v-img
-            height="250"
-            alt="Логотип мероприятия"
-            :gradient="`to ${index % 2 == 0 ? 'right' : 'left'}, rgba(0,0,0,.0), rgba(48,48,48,1)`"
-            :src="event.logo"
-          />
-        </v-avatar>
-        <div>
-          <v-card-title class="text-h4">
-            {{ event.name }}
-          </v-card-title>
-          <v-card-text class="text-h6 text-justify">
-            {{ event.shortDescription }}
-          </v-card-text>
-        </div>
-      </v-card>
-    </template>
+        <v-img
+          height="250"
+          alt="Логотип мероприятия"
+          :gradient="`to ${index % 2 == 0 ? 'right' : 'left'}, rgba(0,0,0,.0), rgba(48,48,48,1)`"
+          :src="event.logo"
+        />
+      </v-avatar>
+      <div>
+        <v-card-title class="text-h4">
+          {{ event.name }}
+        </v-card-title>
+        <v-card-text class="text-h6 text-justify">
+          {{ event.shortDescription }}
+        </v-card-text>
+      </div>
+    </v-card>
 
-    <template #default="{ isActive }">
+    <v-dialog
+      v-model="dialog"
+      max-width="800"
+    >
       <v-card>
-        <v-card-title  class="text-h4">
+        <v-card-title class="text-h4">
           {{ event.name }}
         </v-card-title>
         <v-row
@@ -49,7 +50,6 @@
               :src="event.logo"
             />
           </v-avatar>
-
         </v-row>
         <v-card-text class="text-body-1 text-justify">
           {{ event.longDescription }}
@@ -59,19 +59,22 @@
           <v-btn
             text="Закрыть"
             variant="text"
-            @click="isActive.value = false"
+            @click="dialog = false"
           />
         </v-card-actions>
       </v-card>
-    </template>
-  </v-dialog>
+    </v-dialog>
+  </div>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
 import type { DataLong } from '@/components/pages/home/model/all_data';
 
 defineProps<{
   event: DataLong;
   index: number;
 }>();
+
+const dialog = ref<boolean>(false);
 </script>
