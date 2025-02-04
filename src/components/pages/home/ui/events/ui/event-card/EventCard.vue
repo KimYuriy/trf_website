@@ -69,10 +69,10 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import type { DataLong } from '@/components/pages/home/model/all_data';
+import type { LongDataModel } from '@/components/pages/home/model/all_data';
 
 defineProps<{
-  event: DataLong;
+  event: LongDataModel;
   index: number;
 }>();
 

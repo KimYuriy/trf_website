@@ -35,43 +35,46 @@
             "logo": "src/assets/images/homa.jpg"
         }
     ],
-    "gallery": [
-        {
-            "id": 0,
-            "name": "Соревнование 1",
-            "description": "Краткое описание соревнований 1",
-            "logo": "src/assets/images/homa.jpg",
-            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        },
-        {
-            "id": 0,
-            "name": "Соревнование 2",
-            "description": "Краткое описание соревнований 2",
-            "logo": "src/assets/images/homa.jpg",
-            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        },
-        {
-            "id": 0,
-            "name": "Соревнование 3",
-            "description": "Краткое описание соревнований 3",
-            "logo": "src/assets/images/homa.jpg",
-            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        },
-        {
-            "id": 0,
-            "name": "Соревнование 4",
-            "description": "Краткое описание соревнований 4",
-            "logo": "src/assets/images/homa.jpg",
-            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        },
-        {
-            "id": 0,
-            "name": "Соревнование 5",
-            "description": "Краткое описание соревнований 5",
-            "logo": "src/assets/images/homa.jpg",
-            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        }
-    ],
+    "gallery": {
+        "backgroundImg": "src/assets/images/bg.png",
+        "albums": [
+            {
+                "id": 0,
+                "name": "Соревнование 1",
+                "description": "Краткое описание соревнований 1",
+                "logo": "src/assets/images/homa.jpg",
+                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            },
+            {
+                "id": 0,
+                "name": "Соревнование 2",
+                "description": "Краткое описание соревнований 2",
+                "logo": "src/assets/images/homa.jpg",
+                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            },
+            {
+                "id": 0,
+                "name": "Соревнование 3",
+                "description": "Краткое описание соревнований 3",
+                "logo": "src/assets/images/homa.jpg",
+                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            },
+            {
+                "id": 0,
+                "name": "Соревнование 4",
+                "description": "Краткое описание соревнований 4",
+                "logo": "src/assets/images/homa.jpg",
+                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            },
+            {
+                "id": 0,
+                "name": "Соревнование 5",
+                "description": "Краткое описание соревнований 5",
+                "logo": "src/assets/images/homa.jpg",
+                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            }
+        ]
+    },
     "partners": [
         {
             "id": 0,

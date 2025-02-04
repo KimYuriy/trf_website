@@ -11,7 +11,7 @@
     "type-check": "vue-tsc --build"
   },
   "dependencies": {
-    "@mdi/font": "5.9.55",
+    "@mdi/font": "^5.9.55",
     "pinia": "^2.3.1",
     "roboto-fontface": "*",
     "scss": "^0.2.4",

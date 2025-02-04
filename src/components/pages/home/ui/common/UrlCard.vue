@@ -21,9 +21,9 @@
 </template>
   
 <script setup lang="ts">
-import type { DataUrl } from '@/components/pages/home/model/all_data';
+import type { DataUrlModel } from '@/components/pages/home/model/all_data';
 
 defineProps<{
-  data: DataUrl
+  data: DataUrlModel
 }>();
 </script>

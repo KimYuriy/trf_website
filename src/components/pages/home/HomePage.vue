@@ -14,9 +14,9 @@
       :events="data.events"
     />
     <gallery
-      v-if="data.gallery.length > 0"
+      v-if="data.gallery.albums.length > 0"
       id="gallery"
-      :albums="data.gallery"
+      :data="data.gallery"
     />
     <partners
       v-if="data.partners.length > 0"

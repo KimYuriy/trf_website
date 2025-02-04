@@ -24,10 +24,10 @@
 </template>
 
 <script setup lang="ts">
-import type { Data } from '@/components/pages/home/model/all_data';
+import type { ShortDataModel } from '@/components/pages/home/model/all_data';
 import CustomTitle from '@/components/pages/home/ui/common/CustomTitle.vue';
 
 defineProps<{
-  info: Data
+  info: ShortDataModel
 }>()
 </script>

@@ -20,11 +20,11 @@
 
 <script setup lang="ts">
 import EventCard from '@/components/pages/home/ui/events/ui/event-card/EventCard.vue';
-import type { DataLong } from '@/components/pages/home/model/all_data';
+import type { LongDataModel } from '@/components/pages/home/model/all_data';
 import CustomTitle from '@/components/pages/home/ui/common/CustomTitle.vue';
 
 defineProps<{
-  events: DataLong[]
+  events: LongDataModel[]
 }>();
 
 const scrollToEvent = (sectionId: number) => {

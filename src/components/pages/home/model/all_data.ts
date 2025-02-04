@@ -1,7 +1,7 @@
 export interface IAllData {
   about: IData;
   events: IDataLong[];
-  gallery: IDataUrl[];
+  gallery: IGallery;
   partners: IDataUrl[];
   socialmedias: IDataUrl[];
   contacts: IDataUrl[];
@@ -30,7 +30,12 @@ export interface IDataUrl {
   url: string
 }
 
-export class Data {
+export interface IGallery {
+  backgroundImg: string;
+  albums: IDataUrl[];
+}
+
+export class ShortDataModel {
   constructor(json: IData) {
     this.id = json.id;
     this.name = json.name;
@@ -44,7 +49,7 @@ export class Data {
   logo: string;
 }
 
-export class DataLong {
+export class LongDataModel {
   constructor(json: IDataLong) {
     this.id = json.id;
     this.name = json.name;
@@ -60,7 +65,7 @@ export class DataLong {
   logo: string;
 }
 
-export class DataUrl {
+export class DataUrlModel {
   constructor(json: IDataUrl) {
     this.id = json.id;
     this.name = json.name;
@@ -76,20 +81,30 @@ export class DataUrl {
   url: string;
 }
 
-export class AllDataModel {
-  constructor(json: IAllData) {
-    this.about = new Data(json.about);
-    this.events = json.events.map(event => new DataLong(event));
-    this.gallery = json.gallery.map(album => new DataUrl(album));
-    this.partners = json.partners.map(partner => new DataUrl(partner));
-    this.socialmedias = json.socialmedias.map(social => new DataUrl(social));
-    this.contacts = json.contacts.map(contact => new DataUrl(contact));
+export class GalleryDataModel {
+  constructor(json: IGallery) {
+    this.backgroundImg = json.backgroundImg;
+    this.albums = json.albums.map(album => new DataUrlModel(album));
   }
 
-  about: Data;
-  events: DataLong[];
-  gallery: DataUrl[];
-  partners: DataUrl[];
-  socialmedias: DataUrl[];
-  contacts: DataUrl[];
+  backgroundImg: string;
+  albums: DataUrlModel[];
+}
+
+export class AllDataModel {
+  constructor(json: IAllData) {
+    this.about = new ShortDataModel(json.about);
+    this.events = json.events.map(event => new LongDataModel(event));
+    this.gallery = new GalleryDataModel(json.gallery);
+    this.partners = json.partners.map(partner => new DataUrlModel(partner));
+    this.socialmedias = json.socialmedias.map(social => new DataUrlModel(social));
+    this.contacts = json.contacts.map(contact => new DataUrlModel(contact));
+  }
+
+  about: ShortDataModel;
+  events: LongDataModel[];
+  gallery: GalleryDataModel;
+  partners: DataUrlModel[];
+  socialmedias: DataUrlModel[];
+  contacts: DataUrlModel[];
 }
