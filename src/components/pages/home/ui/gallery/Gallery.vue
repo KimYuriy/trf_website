@@ -6,7 +6,6 @@
       height="425"
       hide-delimiters
       cycle
-      interval="6000"
       :style="{ backgroundImage: `url(${data.backgroundImg})`, backgroundSize: 'cover' }"
     >
       <v-carousel-item v-for="album in data.albums">

@@ -9,19 +9,32 @@
         @click="scrollToEvent(event.id)"
       />
     </v-row>
-    <event-card
-      v-for="(event, index) in events"
-      :id="event.id"
-      :event="event"
-      :index="index"
-    />
+    <v-expansion-panels variant="accordion">
+      <v-expansion-panel
+        v-for="(event, index) in events"
+        class="bg-transparent"
+        hide-actions
+        elevation="0"
+        :id="event.id"
+      >
+        <v-expansion-panel-title class="ma-0 pa-0">
+          <event-card
+            :event="event"
+            :index="index"
+          />
+        </v-expansion-panel-title>
+        <v-expansion-panel-text class="text-body-1 text-justify">
+          {{ event.longDescription }}
+        </v-expansion-panel-text>
+      </v-expansion-panel>
+    </v-expansion-panels>
   </v-container>
 </template>
 
 <script setup lang="ts">
-import EventCard from '@/components/pages/home/ui/events/ui/event-card/EventCard.vue';
 import type { LongDataModel } from '@/components/pages/home/model/all_data';
 import CustomTitle from '@/components/pages/home/ui/common/CustomTitle.vue';
+import EventCard from '@/components/pages/home/ui/events/ui/event-card/EventCard.vue';
 
 defineProps<{
   events: LongDataModel[]

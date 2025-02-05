@@ -1,5 +1,5 @@
 <template>
-  <v-container class="mt-5 mb-5">
+  <v-container class="my-5">
     <custom-title text="Контакты" />
     <v-row class="mt-5">
       <v-col

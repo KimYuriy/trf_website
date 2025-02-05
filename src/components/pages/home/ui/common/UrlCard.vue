@@ -1,8 +1,8 @@
 <template>
   <v-card
     target="_blank"
-    :max-height="800"
-    :max-width="400"
+    :max-height="maxWidth * 2"
+    :max-width="maxWidth"
     :href="data.url"
   >
     <v-img
@@ -23,7 +23,13 @@
 <script setup lang="ts">
 import type { DataUrlModel } from '@/components/pages/home/model/all_data';
 
-defineProps<{
-  data: DataUrlModel
-}>();
+withDefaults(
+  defineProps<{
+    data: DataUrlModel;
+    maxWidth?: number
+  }>(),
+  {
+    maxWidth: 300
+  }
+);
 </script>
