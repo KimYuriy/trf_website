@@ -1,9 +1,7 @@
 <template>
  <v-card
     class="d-flex justify-space-between my-5"
-    :class="[
-      smAndUp? `${index % 2 === 0 ? '' : 'flex-row-reverse'}` : 'flex-column align-center',
-    ]"
+    :class="smAndUp? `${index % 2 === 0 ? '' : 'flex-row-reverse'}` : 'flex-column align-center'"
     variant="text"
   >
     <v-avatar
@@ -34,12 +32,12 @@
 
 <script setup lang="ts">
 import type { LongDataModel } from '@/components/pages/home/model/all_data';
-import { useDisplay } from 'vuetify'
+import { useDisplay } from 'vuetify';
 
 defineProps<{
   event: LongDataModel;
   index: number;
 }>();
 
-const { smAndUp } = useDisplay()
+const { smAndUp } = useDisplay();
 </script>
