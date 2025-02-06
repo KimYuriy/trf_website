@@ -5,16 +5,16 @@
       no-gutters
     >
       <v-btn
-        v-for="title in titles"
-        class="mx-1"
-        color="black"
+        v-if="smAndUp"
+        v-for="title in NavLinks"
+        class="mx-1 text-black"
         variant="text"
         @click="emit('nav-clicked', title.id)"
       >
         <strong>{{ title.text }}</strong>
       </v-btn>
       <v-col
-        class="text-center text-black text-uppercase mt-4 mb-4"
+        class="text-center text-black text-uppercase my-4"
         cols="12"
       >
         {{ name }} — {{ new Date().getFullYear() }}
@@ -24,18 +24,14 @@
 </template>
 
 <script setup lang="ts">
+import { useDisplay } from 'vuetify';
+import { NavLinks } from '@/components/pages/home/model/nav_links';
+
 defineProps<{
   name: string
 }>();
 
-const titles = [
-  { id: "about", text: 'О нас' },
-  { id: "events", text: 'Мероприятия' },
-  { id: "gallery", text: 'Галерея' },
-  { id: "partners", text: 'Партнёры' },
-  { id: "social", text: 'Соц.сети' },
-  { id: "contacts", text: 'Контакты' }
-];
+const { smAndUp } = useDisplay();
 
 const emit = defineEmits(['nav-clicked']);
 </script>

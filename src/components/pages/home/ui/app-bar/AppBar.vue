@@ -10,9 +10,8 @@
         justify="center"
       >
         <v-btn
-          v-for="link in titles"
+          v-for="link in NavLinks"
           class="mx-1 text-black"
-          :key="link.id"
           @click="emit('nav-clicked', link.id)"
         >
           <strong>{{ link.text }}</strong>
@@ -34,13 +33,18 @@
     <v-navigation-drawer
       v-model="drawer"
       temporary
+      :style="{
+        backgroundColor: '#303030'
+      }"
     >
       <v-list>
         <v-list-item
-          v-for="link in titles"
-          :title="link.text"
+          v-for="link in NavLinks"
+          class="custom-font text-uppercase text-white"
           @click="scrollToBlock(link.id)"
-        />
+        >
+          {{ link.text }}
+        </v-list-item>
       </v-list>
     </v-navigation-drawer>
   </div>
@@ -49,21 +53,13 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useDisplay } from 'vuetify';
+import { NavLinks } from '@/components/pages/home/model/nav_links';
 
 defineProps<{
   title: string
 }>();
 
 const { smAndUp } = useDisplay();
-
-const titles = [
-  { id: "about", text: 'О нас' },
-  { id: "events", text: 'Мероприятия' },
-  { id: "gallery", text: 'Галерея' },
-  { id: "partners", text: 'Партнёры' },
-  { id: "social", text: 'Соц.сети' },
-  { id: "contacts", text: 'Контакты' }
-];
 
 const emit = defineEmits(['nav-clicked']);
 
@@ -74,3 +70,9 @@ const scrollToBlock = (id: string) => {
   emit('nav-clicked', id);
 }
 </script>
+
+<style scoped>
+.custom-font {
+  font-family: 'Bahnschrift';
+}
+</style>
