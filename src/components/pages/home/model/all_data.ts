@@ -1,10 +1,19 @@
 export interface IAllData {
   about: IData;
-  events: IDataLong[];
+  events: IEvent[];
   gallery: IGallery;
   partners: IDataUrl[];
   socialmedias: IDataUrl[];
   contacts: IDataUrl[];
+}
+
+export interface IEvent {
+  id: number;
+  name: string;
+  short_description: string;
+  long_description: string;
+  logo: string;
+  img: string
 }
 
 export interface IData {
@@ -91,10 +100,28 @@ export class GalleryDataModel {
   albums: DataUrlModel[];
 }
 
+export class EventDataModel {
+  constructor(json: IEvent) {
+    this.id = json.id;
+    this.name = json.name;
+    this.shortDescription = json.short_description;
+    this.longDescription = json.long_description;
+    this.logo = json.logo;
+    this.img = json.img;
+  }
+
+  id: number;
+  name: string;
+  shortDescription: string;
+  longDescription: string;
+  logo: string;
+  img: string;
+}
+
 export class AllDataModel {
   constructor(json: IAllData) {
     this.about = new ShortDataModel(json.about);
-    this.events = json.events.map(event => new LongDataModel(event));
+    this.events = json.events.map(event => new EventDataModel(event));
     this.gallery = new GalleryDataModel(json.gallery);
     this.partners = json.partners.map(partner => new DataUrlModel(partner));
     this.socialmedias = json.socialmedias.map(social => new DataUrlModel(social));
@@ -102,7 +129,7 @@ export class AllDataModel {
   }
 
   about: ShortDataModel;
-  events: LongDataModel[];
+  events: EventDataModel[];
   gallery: GalleryDataModel;
   partners: DataUrlModel[];
   socialmedias: DataUrlModel[];

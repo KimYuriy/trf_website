@@ -34,13 +34,13 @@
 </template>
 
 <script setup lang="ts">
-import type { LongDataModel } from '@/components/pages/home/model/all_data';
+import { useDisplay } from 'vuetify';
+import type { EventDataModel } from '@/components/pages/home/model/all_data';
 import CustomTitle from '@/components/pages/home/ui/common/CustomTitle.vue';
 import EventCard from '@/components/pages/home/ui/events/ui/event-card/EventCard.vue';
-import { useDisplay } from 'vuetify';
 
 defineProps<{
-  events: LongDataModel[]
+  events: EventDataModel[]
 }>();
 
 const { mdAndDown } = useDisplay();
