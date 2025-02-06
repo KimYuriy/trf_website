@@ -1,7 +1,8 @@
 <template>
   <v-container>
     <custom-title
-      text-style="text-h2 my-5"
+      text-style="my-5"
+      :class="smAndUp? 'text-h2' : 'text-h4'"
       :text="info.name"
     />
     <v-card-text class="text-h6 text-justify">
@@ -11,10 +12,13 @@
 </template>
 
 <script setup lang="ts">
+import { useDisplay } from 'vuetify';
 import type { ShortDataModel } from '@/components/pages/home/model/all_data';
 import CustomTitle from '@/components/pages/home/ui/common/CustomTitle.vue';
 
 defineProps<{
   info: ShortDataModel
-}>()
+}>();
+
+const { smAndUp } = useDisplay();
 </script>
