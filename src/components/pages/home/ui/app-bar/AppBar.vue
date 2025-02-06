@@ -12,7 +12,7 @@
         <v-btn
           v-for="link in NavLinks"
           class="mx-1 text-black"
-          @click="emit('nav-clicked', link.id)"
+          @click="emit('navClicked', link.id)"
         >
           <strong>{{ link.text }}</strong>
         </v-btn>
@@ -61,13 +61,15 @@ defineProps<{
 
 const { smAndUp } = useDisplay();
 
-const emit = defineEmits(['nav-clicked']);
+const emit = defineEmits<{
+  navClicked: [id: string]
+}>();
 
 const drawer = ref<boolean>(false);
 
 const scrollToBlock = (id: string) => {
   drawer.value = false;
-  emit('nav-clicked', id);
+  emit('navClicked', id);
 }
 </script>
 

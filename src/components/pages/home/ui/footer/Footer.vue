@@ -9,7 +9,7 @@
         v-for="title in NavLinks"
         class="mx-1 text-black"
         variant="text"
-        @click="emit('nav-clicked', title.id)"
+        @click="emit('navClicked', title.id)"
       >
         <strong>{{ title.text }}</strong>
       </v-btn>
@@ -33,5 +33,7 @@ defineProps<{
 
 const { smAndUp } = useDisplay();
 
-const emit = defineEmits(['nav-clicked']);
+const emit = defineEmits<{
+  navClicked: [id: string]
+}>();
 </script>
