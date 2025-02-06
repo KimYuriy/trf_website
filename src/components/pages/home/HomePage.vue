@@ -1,40 +1,40 @@
 <template>
   <v-container fluid class="ma-0 pa-0">
     <app-bar
-      :title="data.about.name"
+      :title="data!.about.name"
       @nav-clicked="scrollToSection"
     />
     <about-organization
       id="about"
-      :info="data.about"
+      :info="data!.about"
     />
     <events 
-      v-if="data.events.length > 0"
+      v-if="data!.events.length > 0"
       id="events"
-      :events="data.events"
+      :events="data!.events"
     />
     <gallery
-      v-if="data.gallery.albums.length > 0"
+      v-if="data!.gallery.albums.length > 0"
       id="gallery"
-      :data="data.gallery"
+      :data="data!.gallery"
     />
     <partners
-      v-if="data.partners.length > 0"
+      v-if="data!.partners.length > 0"
       id="partners"
-      :partners="data.partners"
+      :partners="data!.partners"
     />
     <social-media
-      v-if="data.socialmedias.length > 0"
+      v-if="data!.socialmedias.length > 0"
       id="social"
-      :socials="data.socialmedias"
+      :socials="data!.socialmedias"
     />
     <contacts
-      v-if="data.contacts.length > 0"
+      v-if="data!.contacts.length > 0"
       id="contacts"
-      :contacts="data.contacts"
+      :contacts="data!.contacts"
     />
     <custom-footer
-      :name="data.about.name"
+      :name="data!.about.name"
       @nav-clicked="scrollToSection"
     />
   </v-container>
@@ -51,9 +51,9 @@ import Partners from '@/components/pages/home/ui/partners/Partners.vue';
 import SocialMedia from '@/components/pages/home/ui/socialmedia/SocialMedia.vue';
 import Contacts from '@/components/pages/home/ui/contacts/Contacts.vue';
 import CustomFooter from '@/components/pages/home/ui/footer/Footer.vue';
+import { onBeforeMount, ref } from 'vue';
 
-//TODO: сделать получение JSON с сервера
-const data = new AllDataModel(testJson as IAllData);
+const data = ref<AllDataModel | null>(null);
 
 const scrollToSection = (sectionId: string) => {
   const element = document.getElementById(sectionId);
@@ -66,4 +66,9 @@ const scrollToSection = (sectionId: string) => {
     });
   }
 };
+
+onBeforeMount(() => {
+  //TODO: сделать получение JSON с сервера
+  data.value = new AllDataModel(testJson as IAllData);
+});
 </script>
