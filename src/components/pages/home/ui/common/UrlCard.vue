@@ -1,14 +1,17 @@
 <template>
   <v-card
-    target="_blank"
     :max-height="maxWidth * 2"
     :max-width="maxWidth"
-    :href="data.url"
   >
-    <v-img
-      cover
-      :src="data.logo"
-    />
+    <a
+      target="_blank"
+      :href="data.url"
+    >
+      <v-img
+        cover
+        :src="data.logo"
+      />
+    </a>
     <v-card-title
       class="text-h5 text-pre-line text-center"
       v-text="data.name"
@@ -21,11 +24,11 @@
 </template>
   
 <script setup lang="ts">
-import type { DataUrlModel } from '@/components/pages/home/model/all_data';
+import type { DataModel } from '@/components/pages/home/model/all_data';
 
 withDefaults(
   defineProps<{
-    data: DataUrlModel;
+    data: DataModel;
     maxWidth?: number
   }>(),
   {

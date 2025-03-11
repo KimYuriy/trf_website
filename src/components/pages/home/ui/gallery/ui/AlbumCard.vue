@@ -22,9 +22,9 @@
 </template>
 
 <script setup lang="ts">
-import type { DataUrlModel } from '@/components/pages/home/model/all_data';
+import type { DataModel } from '@/components/pages/home/model/all_data';
 
 defineProps<{
-  album: DataUrlModel
+  album: DataModel
 }>();
 </script>

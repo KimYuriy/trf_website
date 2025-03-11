@@ -1,7 +1,10 @@
 <template >
   <v-container class="my-5">
     <custom-title text="Наши мероприятия" />
-    <v-row class="pa-0 mt-4 mb-8 justify-space-between">
+    <v-row
+      v-if="smAndUp"
+      class="pa-0 mt-4 mb-8 justify-space-between"
+    >
       <v-img
         v-for="event in events"
         class=" my-0 pa-0"
@@ -35,15 +38,15 @@
 
 <script setup lang="ts">
 import { useDisplay } from 'vuetify';
-import type { EventDataModel } from '@/components/pages/home/model/all_data';
+import type { EventModel } from '@/components/pages/home/model/all_data';
 import CustomTitle from '@/components/pages/home/ui/common/CustomTitle.vue';
 import EventCard from '@/components/pages/home/ui/events/ui/event-card/EventCard.vue';
 
 defineProps<{
-  events: EventDataModel[]
+  events: EventModel[]
 }>();
 
-const { mdAndDown } = useDisplay();
+const { mdAndDown, smAndUp } = useDisplay();
 
 const scrollToEvent = (sectionId: number) => {
   const element = document.getElementById(sectionId.toString());

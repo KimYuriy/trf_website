@@ -1,10 +1,20 @@
 export interface IAllData {
-  about: IData;
+  about: IAbout;
   events: IEvent[];
-  gallery: IGallery;
+  gallery: IPhotoAlbum[];
   partners: IDataUrl[];
   socialmedias: IDataUrl[];
   contacts: IDataUrl[];
+}
+
+export interface IAbout {
+  id: number;
+  name: string;
+  description: string;
+  logo_zh: string;
+  logo_edc: string;
+  logo_dv: string;
+  logo_rus: string;
 }
 
 export interface IEvent {
@@ -16,19 +26,13 @@ export interface IEvent {
   img: string
 }
 
-export interface IData {
+export interface IPhotoAlbum {
   id: number;
   name: string;
   description: string;
   logo: string;
-}
-
-export interface IDataLong {
-  id: number;
-  name: string;
-  short_description: string;
-  long_description: string;
-  logo: string;
+  url: string;
+  backgroundImg: string;
 }
 
 export interface IDataUrl {
@@ -39,42 +43,7 @@ export interface IDataUrl {
   url: string
 }
 
-export interface IGallery {
-  backgroundImg: string;
-  albums: IDataUrl[];
-}
-
-export class ShortDataModel {
-  constructor(json: IData) {
-    this.id = json.id;
-    this.name = json.name;
-    this.description = json.description;
-    this.logo = json.logo;
-  }
-
-  id: number;
-  name: string;
-  description: string;
-  logo: string;
-}
-
-export class LongDataModel {
-  constructor(json: IDataLong) {
-    this.id = json.id;
-    this.name = json.name;
-    this.shortDescription = json.short_description;
-    this.longDescription = json.long_description;
-    this.logo = json.logo;
-  }
-
-  id: number;
-  name: string;
-  shortDescription: string;
-  longDescription: string;
-  logo: string;
-}
-
-export class DataUrlModel {
+export class DataModel {
   constructor(json: IDataUrl) {
     this.id = json.id;
     this.name = json.name;
@@ -90,17 +59,7 @@ export class DataUrlModel {
   url: string;
 }
 
-export class GalleryDataModel {
-  constructor(json: IGallery) {
-    this.backgroundImg = json.backgroundImg;
-    this.albums = json.albums.map(album => new DataUrlModel(album));
-  }
-
-  backgroundImg: string;
-  albums: DataUrlModel[];
-}
-
-export class EventDataModel {
+export class EventModel {
   constructor(json: IEvent) {
     this.id = json.id;
     this.name = json.name;
@@ -118,20 +77,58 @@ export class EventDataModel {
   img: string;
 }
 
-export class AllDataModel {
-  constructor(json: IAllData) {
-    this.about = new ShortDataModel(json.about);
-    this.events = json.events.map(event => new EventDataModel(event));
-    this.gallery = new GalleryDataModel(json.gallery);
-    this.partners = json.partners.map(partner => new DataUrlModel(partner));
-    this.socialmedias = json.socialmedias.map(social => new DataUrlModel(social));
-    this.contacts = json.contacts.map(contact => new DataUrlModel(contact));
+export class AboutModel {
+  constructor(json: IAbout) {
+    this.id = json.id;
+    this.name = json.name;
+    this.description = json.description;
+    this.logoZH = json.logo_zh;
+    this.logoEDC = json.logo_edc;
+    this.logoDV = json.logo_dv;
+    this.logoRUS = json.logo_rus;
   }
 
-  about: ShortDataModel;
-  events: EventDataModel[];
-  gallery: GalleryDataModel;
-  partners: DataUrlModel[];
-  socialmedias: DataUrlModel[];
-  contacts: DataUrlModel[];
+  id: number;
+  name: string;
+  description: string;
+  logoZH: string;
+  logoEDC: string;
+  logoDV: string;
+  logoRUS: string;
+}
+
+export class PhotoAlbumModel {
+  constructor(json: IPhotoAlbum) {
+    this.id = json.id;
+    this.name = json.name;
+    this.description = json.description;
+    this.logo = json.logo;
+    this.url = json.url;
+    this.backgroundImg = json.backgroundImg;
+  }
+
+  id: number;
+  name: string;
+  description: string;
+  logo: string;
+  url: string;
+  backgroundImg: string;
+}
+
+export class AllDataModel {
+  constructor(json: IAllData) {
+    this.about = new AboutModel(json.about);
+    this.events = json.events.map(event => new EventModel(event));
+    this.gallery = json.gallery.map(album => new PhotoAlbumModel(album));
+    this.partners = json.partners.map(partner => new DataModel(partner));
+    this.socialmedias = json.socialmedias.map(social => new DataModel(social));
+    this.contacts = json.contacts.map(contact => new DataModel(contact));
+  }
+
+  about: AboutModel;
+  events: EventModel[];
+  gallery: PhotoAlbumModel[];
+  partners: DataModel[];
+  socialmedias: DataModel[];
+  contacts: DataModel[];
 }

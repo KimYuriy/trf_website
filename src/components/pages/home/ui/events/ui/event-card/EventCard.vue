@@ -7,7 +7,7 @@
     <v-img
       :class="smAndUp && index % 2 === 0 ? 'mr-5' : 'ml-5'"
       cover
-      alt="Логотип мероприятия"
+      :alt="event.name"
       :width="smAndUp ? 300 : 500"
       :gradient="smAndUp? `to ${index % 2 == 0 ? 'right' : 'left'}, rgba(0,0,0,.0), rgba(48,48,48,1)`: ''"
       :src="event.img"
@@ -28,10 +28,10 @@
 
 <script setup lang="ts">
 import { useDisplay } from 'vuetify';
-import type { EventDataModel } from '@/components/pages/home/model/all_data';
+import type { EventModel } from '@/components/pages/home/model/all_data';
 
 defineProps<{
-  event: EventDataModel;
+  event: EventModel;
   index: number;
 }>();
 

@@ -13,15 +13,15 @@
       id="events"
       :events="data!.events"
     />
-    <gallery
-      v-if="data!.gallery.albums.length > 0"
-      id="gallery"
-      :data="data!.gallery"
-    />
     <partners
       v-if="data!.partners.length > 0"
       id="partners"
       :partners="data!.partners"
+    />
+    <gallery
+      v-if="data!.gallery.length > 0"
+      id="gallery"
+      :albums="data!.gallery"
     />
     <social-media
       v-if="data!.socialmedias.length > 0"
@@ -41,6 +41,7 @@
 </template>
 
 <script setup lang="ts">
+import { onBeforeMount, ref } from 'vue';
 import { AllDataModel, type IAllData } from './model/all_data';
 import testJson from '@/test_data/test_incoming_json.json';
 import AppBar from '@/components/pages/home/ui/app-bar/AppBar.vue';
@@ -51,7 +52,6 @@ import Partners from '@/components/pages/home/ui/partners/Partners.vue';
 import SocialMedia from '@/components/pages/home/ui/socialmedia/SocialMedia.vue';
 import Contacts from '@/components/pages/home/ui/contacts/Contacts.vue';
 import CustomFooter from '@/components/pages/home/ui/footer/Footer.vue';
-import { onBeforeMount, ref } from 'vue';
 
 const data = ref<AllDataModel | null>(null);
 

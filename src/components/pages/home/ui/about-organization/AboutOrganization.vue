@@ -13,11 +13,11 @@
 
 <script setup lang="ts">
 import { useDisplay } from 'vuetify';
-import type { ShortDataModel } from '@/components/pages/home/model/all_data';
+import type { AboutModel } from '@/components/pages/home/model/all_data';
 import CustomTitle from '@/components/pages/home/ui/common/CustomTitle.vue';
 
 defineProps<{
-  info: ShortDataModel
+  info: AboutModel
 }>();
 
 const { smAndUp } = useDisplay();

@@ -3,7 +3,10 @@
         "id": 0,
         "name": "Название объединения",
         "description": "Sed eget consectetur urna, quis tempus ante. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam sagittis dictum posuere. In vel mi id arcu bibendum pretium. Nunc placerat sapien eget sem pulvinar aliquet. Pellentesque consectetur nisi at nulla auctor, quis mattis tortor convallis. Ut euismod diam in libero volutpat, eget ultricies erat ullamcorper.",
-        "logo": "src/assets/images/homa.jpg"
+        "logo_zh": "src/assets/images/homa.jpg",
+        "logo_edc": "src/assets/images/homa.jpg",
+        "logo_dv": "src/assets/images/homa.jpg",
+        "logo_rus": "src/assets/images/homa.jpg"
     },
     "events": [
         {
@@ -39,46 +42,48 @@
             "img": "src/assets/images/bg.png"
         }
     ],
-    "gallery": {
-        "backgroundImg": "src/assets/images/bg.png",
-        "albums": [
-            {
-                "id": 0,
-                "name": "Соревнование 1",
-                "description": "Краткое описание соревнований 1",
-                "logo": "src/assets/images/homa.jpg",
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-            },
-            {
-                "id": 0,
-                "name": "Соревнование 2",
-                "description": "Краткое описание соревнований 2",
-                "logo": "src/assets/images/homa.jpg",
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-            },
-            {
-                "id": 0,
-                "name": "Соревнование 3",
-                "description": "Краткое описание соревнований 3",
-                "logo": "src/assets/images/homa.jpg",
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-            },
-            {
-                "id": 0,
-                "name": "Соревнование 4",
-                "description": "Краткое описание соревнований 4",
-                "logo": "src/assets/images/homa.jpg",
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-            },
-            {
-                "id": 0,
-                "name": "Соревнование 5",
-                "description": "Краткое описание соревнований 5",
-                "logo": "src/assets/images/homa.jpg",
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-            }
-        ]
-    },
+    "gallery":  [
+        {
+            "id": 0,
+            "name": "Соревнование 1",
+            "description": "Краткое описание соревнований 1",
+            "logo": "src/assets/images/homa.jpg",
+            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "backgroundImg": "src/assets/images/bg.png"
+        },
+        {
+            "id": 0,
+            "name": "Соревнование 2",
+            "description": "Краткое описание соревнований 2",
+            "logo": "src/assets/images/homa.jpg",
+            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "backgroundImg": "src/assets/images/bg.png"
+        },
+        {
+            "id": 0,
+            "name": "Соревнование 3",
+            "description": "Краткое описание соревнований 3",
+            "logo": "src/assets/images/homa.jpg",
+            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "backgroundImg": "src/assets/images/bg.png"
+        },
+        {
+            "id": 0,
+            "name": "Соревнование 4",
+            "description": "Краткое описание соревнований 4",
+            "logo": "src/assets/images/homa.jpg",
+            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "backgroundImg": "src/assets/images/bg.png"
+        },
+        {
+            "id": 0,
+            "name": "Соревнование 5",
+            "description": "Краткое описание соревнований 5",
+            "logo": "src/assets/images/homa.jpg",
+            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "backgroundImg": "src/assets/images/bg.png"
+        }
+    ],
     "partners": [
         {
             "id": 0,
