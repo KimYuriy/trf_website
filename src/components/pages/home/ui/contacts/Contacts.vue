@@ -9,7 +9,6 @@
 
 <script setup lang="ts">
 import type { DataModel } from '@/components/pages/home/model/all_data';
-import UrlCard from '@/components/pages/home/ui/common/UrlCard.vue';
 import CustomTitle from '@/components/pages/home/ui/common/CustomTitle.vue';
 import ContactCard from '@/components/pages/home/ui/contacts/ui/contact-card/ContactCard.vue';
 

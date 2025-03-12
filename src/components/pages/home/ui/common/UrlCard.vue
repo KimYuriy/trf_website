@@ -1,5 +1,6 @@
 <template>
   <v-card
+    variant="text"
     :max-height="maxWidth * 2"
     :max-width="maxWidth"
   >

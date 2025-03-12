@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app class="bg">
     <v-main>
       <router-view/>
     </v-main>
@@ -8,3 +8,12 @@
 
 <script setup lang="ts">
 </script>
+
+<style scoped>
+.bg {
+  background: url('src/assets/images/background.jpg');
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>

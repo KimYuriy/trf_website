@@ -1,12 +1,13 @@
 <template>
   <v-container class="my-5">
     <custom-title text="Галерея" />
-    <!-- :style="{ backgroundImage: `url(${data.backgroundImg})`, backgroundSize: 'cover' }" -->
     <v-carousel
+      v-model="currentIndex"
       class="mt-4 pa-3"
       height="425"
       hide-delimiters
       cycle
+      :style="{ backgroundImage: `url(${backgroundImageUrl})`, backgroundSize: 'cover' }"
     >
       <v-carousel-item v-for="album in albums">
         <album-card :album="album" />
@@ -16,11 +17,23 @@
 </template>
 
 <script setup lang="ts">
+import { ref, watch } from 'vue';
 import type { PhotoAlbumModel } from '@/components/pages/home/model/all_data';
 import AlbumCard from '@/components/pages/home/ui/gallery/ui/AlbumCard.vue';
 import CustomTitle from '@/components/pages/home/ui/common/CustomTitle.vue';
 
-defineProps<{
+const props = defineProps<{
   albums: PhotoAlbumModel[]
 }>();
+
+const currentIndex = ref<number>(0);
+
+const backgroundImageUrl = ref<string>(props.albums[currentIndex.value].backgroundImg);
+
+watch(
+  currentIndex,
+  () => {
+    backgroundImageUrl.value = props.albums[currentIndex.value].backgroundImg;
+  }
+);
 </script>

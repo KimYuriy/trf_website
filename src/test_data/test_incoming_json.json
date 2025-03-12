@@ -49,7 +49,7 @@
             "description": "Краткое описание соревнований 1",
             "logo": "src/assets/images/homa.jpg",
             "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-            "backgroundImg": "src/assets/images/bg.png"
+            "backgroundImg": "src/assets/images/0.jpg"
         },
         {
             "id": 0,
@@ -57,7 +57,7 @@
             "description": "Краткое описание соревнований 2",
             "logo": "src/assets/images/homa.jpg",
             "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-            "backgroundImg": "src/assets/images/bg.png"
+            "backgroundImg": "src/assets/images/1.jpg"
         },
         {
             "id": 0,
@@ -65,7 +65,7 @@
             "description": "Краткое описание соревнований 3",
             "logo": "src/assets/images/homa.jpg",
             "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-            "backgroundImg": "src/assets/images/bg.png"
+            "backgroundImg": "src/assets/images/2.jpg"
         },
         {
             "id": 0,
@@ -73,7 +73,7 @@
             "description": "Краткое описание соревнований 4",
             "logo": "src/assets/images/homa.jpg",
             "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-            "backgroundImg": "src/assets/images/bg.png"
+            "backgroundImg": "src/assets/images/3.jpg"
         },
         {
             "id": 0,
@@ -81,7 +81,7 @@
             "description": "Краткое описание соревнований 5",
             "logo": "src/assets/images/homa.jpg",
             "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-            "backgroundImg": "src/assets/images/bg.png"
+            "backgroundImg": "src/assets/images/4.jpg"
         }
     ],
     "partners": [

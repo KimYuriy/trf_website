@@ -5,7 +5,7 @@
     variant="text"
   >
     <v-avatar
-      :size="128"
+      :size="192"
       :image="contact.logo"
     />
     <div>
