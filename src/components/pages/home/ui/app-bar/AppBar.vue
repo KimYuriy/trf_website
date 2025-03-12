@@ -55,9 +55,14 @@ import { ref } from 'vue';
 import { useDisplay } from 'vuetify';
 import { NavLinks } from '@/components/pages/home/model/nav_links';
 
-defineProps<{
-  title: string
-}>();
+withDefaults(
+  defineProps<{
+    title?: string
+  }>(),
+  {
+    title: 'Тактикул.РФ'
+  }
+);
 
 const { smAndUp } = useDisplay();
 

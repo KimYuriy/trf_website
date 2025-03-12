@@ -23,15 +23,15 @@
       id="gallery"
       :albums="data!.gallery"
     />
+    <contacts
+    v-if="data!.contacts.length > 0"
+    id="contacts"
+    :contacts="data!.contacts"
+    />
     <social-media
       v-if="data!.socialmedias.length > 0"
       id="social"
       :socials="data!.socialmedias"
-    />
-    <contacts
-      v-if="data!.contacts.length > 0"
-      id="contacts"
-      :contacts="data!.contacts"
     />
     <custom-footer
       :name="data!.about.name"

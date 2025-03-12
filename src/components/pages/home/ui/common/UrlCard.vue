@@ -17,10 +17,6 @@
       class="text-h5 text-pre-line text-center"
       v-text="data.name"
     />
-    <v-card-text
-      class="text-body-1 text-center"
-      v-text="data.description"
-    />
   </v-card>
 </template>
   

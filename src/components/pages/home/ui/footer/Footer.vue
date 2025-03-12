@@ -17,7 +17,7 @@
         class="text-center text-black text-uppercase my-4"
         cols="12"
       >
-        {{ name }} — {{ new Date().getFullYear() }}
+        {{ title }} — {{ new Date().getFullYear() }}
       </v-col>
     </v-row>
   </v-footer>
@@ -27,9 +27,14 @@
 import { useDisplay } from 'vuetify';
 import { NavLinks } from '@/components/pages/home/model/nav_links';
 
-defineProps<{
-  name: string
-}>();
+withDefaults(
+  defineProps<{
+    title?: string
+  }>(),
+  {
+    title: 'Тактикул.РФ'
+  }
+);
 
 const { smAndUp } = useDisplay();
 
