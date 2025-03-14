@@ -17,7 +17,7 @@
         class="text-center text-black text-uppercase my-4"
         cols="12"
       >
-        {{ title }} — {{ new Date().getFullYear() }}
+        {{ title }} • 2024 - {{ new Date().getFullYear() }}
       </v-col>
     </v-row>
   </v-footer>
