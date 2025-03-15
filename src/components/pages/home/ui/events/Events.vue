@@ -2,7 +2,7 @@
   <v-container class="my-5">
     <custom-title text="Наши мероприятия" />
     <v-row
-      v-if="smAndUp"
+      v-if="!smAndUp"
       class="pa-0 mt-4 mb-8 justify-space-between"
     >
       <v-img

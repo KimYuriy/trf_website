@@ -1,5 +1,8 @@
 <template>
-  <v-container class="my-5">
+  <v-container
+    class="ma-0 pa-0 my-5"
+    fluid
+  >
     <custom-title text="Контакты" />
       <v-col v-for="contact in contacts">
         <contact-card :contact="contact" />

@@ -3,7 +3,7 @@
         "id": 0,
         "name": "Название объединения",
         "description": "Sed eget consectetur urna, quis tempus ante. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam sagittis dictum posuere. In vel mi id arcu bibendum pretium. Nunc placerat sapien eget sem pulvinar aliquet. Pellentesque consectetur nisi at nulla auctor, quis mattis tortor convallis. Ut euismod diam in libero volutpat, eget ultricies erat ullamcorper.",
-        "logo_zh": "src/assets/images/homa.jpg",
+        "logo_zh": "src/assets/images/logo_zh.png",
         "logo_edc": "src/assets/images/homa.jpg",
         "logo_dv": "src/assets/images/homa.jpg",
         "logo_rus": "src/assets/images/homa.jpg"

@@ -1,5 +1,8 @@
 <template>
-  <v-container class="my-5">
+  <v-container
+    class="ma-0 my-5 pa-0"
+    fluid
+  >
     <custom-title text="Партнёры" />
     <v-row class="mt-5">
       <v-col
