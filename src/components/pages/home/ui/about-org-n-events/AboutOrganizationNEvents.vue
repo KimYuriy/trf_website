@@ -18,10 +18,11 @@
       >
         <v-col cols="10">
           <interactive-logos
-            :logo_dv="info.logoDV"
-            :logo_edc="info.logoEDC"
-            :logo_rus="info.logoRUS"
-            :logo_zh="info.logoZH"
+            :zh="events.zh"
+            :edc="events.edc"
+            :rus="events.rus"
+            :dvudulka="events.dvudulka"
+            @event-clicked="scrollToEvent"
           />
         </v-col>
       </v-row>
@@ -31,7 +32,10 @@
       </v-card-text>
     </div>
 
-    <div class="my-5" id="events">
+    <div
+      class="my-5"
+      id="events"
+    >
       <custom-title text="Наши мероприятия" />
       <v-row
         v-if="!smAndUp"
@@ -48,20 +52,67 @@
       </v-row>
       <v-expansion-panels variant="accordion">
         <v-expansion-panel
-          v-for="(event, index) in events"
           class="bg-transparent"
           hide-actions
           elevation="0"
-          :id="event.id"
+          :id="events.zh.id"
         >
           <v-expansion-panel-title class="ma-0 pa-0">
             <event-card
-              :event="event"
-              :index="index"
+              :event="events.zh"
+              :index="0"
             />
           </v-expansion-panel-title>
           <v-expansion-panel-text class="text-body-1 text-justify">
-            {{ event.longDescription }}
+            {{ events.zh.longDescription }}
+          </v-expansion-panel-text>
+        </v-expansion-panel>
+        <v-expansion-panel
+          class="bg-transparent"
+          hide-actions
+          elevation="0"
+          :id="events.rus.id"
+        >
+          <v-expansion-panel-title class="ma-0 pa-0">
+            <event-card
+              :event="events.rus"
+              :index="1"
+            />
+          </v-expansion-panel-title>
+          <v-expansion-panel-text class="text-body-1 text-justify">
+            {{ events.rus.longDescription }}
+          </v-expansion-panel-text>
+        </v-expansion-panel>
+        <v-expansion-panel
+          class="bg-transparent"
+          hide-actions
+          elevation="0"
+          :id="events.edc.id"
+        >
+          <v-expansion-panel-title class="ma-0 pa-0">
+            <event-card
+              :event="events.edc"
+              :index="2"
+            />
+          </v-expansion-panel-title>
+          <v-expansion-panel-text class="text-body-1 text-justify">
+            {{ events.edc.longDescription }}
+          </v-expansion-panel-text>
+        </v-expansion-panel>
+        <v-expansion-panel
+          class="bg-transparent"
+          hide-actions
+          elevation="0"
+          :id="events.dvudulka.id"
+        >
+          <v-expansion-panel-title class="ma-0 pa-0">
+            <event-card
+              :event="events.dvudulka"
+              :index="3"
+            />
+          </v-expansion-panel-title>
+          <v-expansion-panel-text class="text-body-1 text-justify">
+            {{ events.dvudulka.longDescription }}
           </v-expansion-panel-text>
         </v-expansion-panel>
       </v-expansion-panels>
@@ -71,15 +122,14 @@
 
 <script setup lang="ts">
 import { useDisplay } from 'vuetify';
-import type { AboutModel } from '@/components/pages/home/model/all_data';
-import type { EventModel } from '@/components/pages/home/model/all_data';
+import type { AboutModel, AllEventsModel } from '@/components/pages/home/model/all_data';
 import CustomTitle from '@/components/pages/home/ui/common/CustomTitle.vue';
 import InteractiveLogos from '@/components/pages/home/ui/about-organization/ui/logos/InteractiveLogos.vue';
 import EventCard from '@/components/pages/home/ui/events/ui/event-card/EventCard.vue';
 
 defineProps<{
   info: AboutModel;
-  events: EventModel[];
+  events: AllEventsModel;
 }>();
 
 const { mdAndDown, smAndUp } = useDisplay();

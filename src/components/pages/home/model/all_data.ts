@@ -1,6 +1,6 @@
 export interface IAllData {
   about: IAbout;
-  events: IEvent[];
+  events: IAllEvents;
   gallery: IPhotoAlbum[];
   partners: IDataUrl[];
   socialmedias: IDataUrl[];
@@ -11,10 +11,13 @@ export interface IAbout {
   id: number;
   name: string;
   description: string;
-  logo_zh: string;
-  logo_edc: string;
-  logo_dv: string;
-  logo_rus: string;
+}
+
+export interface IAllEvents {
+  zh: IEvent;
+  edc: IEvent;
+  dvudulka: IEvent;
+  rus: IEvent;
 }
 
 export interface IEvent {
@@ -59,6 +62,20 @@ export class DataModel {
   url: string;
 }
 
+export class AllEventsModel {
+  constructor(json: IAllEvents) {
+    this.zh = new EventModel(json.zh);
+    this.edc = new EventModel(json.edc);
+    this.dvudulka = new EventModel(json.dvudulka);
+    this.rus = new EventModel(json.rus);
+  }
+
+  zh: EventModel;
+  edc: EventModel;
+  dvudulka: EventModel;
+  rus: EventModel;
+}
+
 export class EventModel {
   constructor(json: IEvent) {
     this.id = json.id;
@@ -82,19 +99,11 @@ export class AboutModel {
     this.id = json.id;
     this.name = json.name;
     this.description = json.description;
-    this.logoZH = json.logo_zh;
-    this.logoEDC = json.logo_edc;
-    this.logoDV = json.logo_dv;
-    this.logoRUS = json.logo_rus;
   }
 
   id: number;
   name: string;
   description: string;
-  logoZH: string;
-  logoEDC: string;
-  logoDV: string;
-  logoRUS: string;
 }
 
 export class PhotoAlbumModel {
@@ -118,7 +127,7 @@ export class PhotoAlbumModel {
 export class AllDataModel {
   constructor(json: IAllData) {
     this.about = new AboutModel(json.about);
-    this.events = json.events.map(event => new EventModel(event));
+    this.events = new AllEventsModel(json.events);
     this.gallery = json.gallery.map(album => new PhotoAlbumModel(album));
     this.partners = json.partners.map(partner => new DataModel(partner));
     this.socialmedias = json.socialmedias.map(social => new DataModel(social));
@@ -126,7 +135,7 @@ export class AllDataModel {
   }
 
   about: AboutModel;
-  events: EventModel[];
+  events: AllEventsModel;
   gallery: PhotoAlbumModel[];
   partners: DataModel[];
   socialmedias: DataModel[];

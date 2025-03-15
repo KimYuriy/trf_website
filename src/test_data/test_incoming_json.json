@@ -2,22 +2,18 @@
     "about": {
         "id": 0,
         "name": "Название объединения",
-        "description": "Sed eget consectetur urna, quis tempus ante. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam sagittis dictum posuere. In vel mi id arcu bibendum pretium. Nunc placerat sapien eget sem pulvinar aliquet. Pellentesque consectetur nisi at nulla auctor, quis mattis tortor convallis. Ut euismod diam in libero volutpat, eget ultricies erat ullamcorper.",
-        "logo_zh": "src/assets/images/logo_zh.png",
-        "logo_edc": "src/assets/images/homa.jpg",
-        "logo_dv": "src/assets/images/homa.jpg",
-        "logo_rus": "src/assets/images/homa.jpg"
+        "description": "Sed eget consectetur urna, quis tempus ante. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam sagittis dictum posuere. In vel mi id arcu bibendum pretium. Nunc placerat sapien eget sem pulvinar aliquet. Pellentesque consectetur nisi at nulla auctor, quis mattis tortor convallis. Ut euismod diam in libero volutpat, eget ultricies erat ullamcorper."
     },
-    "events": [
-        {
+    "events": {
+        "zh": {
             "id": 1,
             "name": "Мероприятие 1",
             "short_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus",
             "long_description":  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula, ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula, ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula, ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus",
-            "logo": "src/assets/images/homa.jpg",
+            "logo": "src/assets/images/logo_zh.png",
             "img": "src/assets/images/bg.png"
         },
-        {
+        "edc": {
             "id": 2,
             "name": "Мероприятие 2",
             "short_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus",
@@ -25,7 +21,7 @@
             "logo": "src/assets/images/homa.jpg",
             "img": "src/assets/images/bg.png"
         },
-        {
+        "dvudulka": {
             "id": 3,
             "name": "Мероприятие 3",
             "short_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus",
@@ -33,7 +29,7 @@
             "logo": "src/assets/images/homa.jpg",
             "img": "src/assets/images/bg.png"
         },
-        {
+        "rus": {
             "id": 4,
             "name": "Мероприятие 4",
             "short_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus",
@@ -41,7 +37,7 @@
             "logo": "src/assets/images/homa.jpg",
             "img": "src/assets/images/bg.png"
         }
-    ],
+    },
     "gallery":  [
         {
             "id": 0,
