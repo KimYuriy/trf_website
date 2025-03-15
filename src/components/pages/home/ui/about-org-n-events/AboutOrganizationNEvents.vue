@@ -5,14 +5,12 @@
   >
     <div id="about">
       <custom-title
-        text-style="my-5"
+        text-style="mt-5"
         :class="smAndUp? 'text-h2' : 'text-h4'"
         :text="info.name"
       />
-      <!--TODO: Отцентрировать -->
       <v-row
         v-if="smAndUp"
-        class="my-5"
         align="center"
         justify="center"
       >
@@ -124,8 +122,8 @@
 import { useDisplay } from 'vuetify';
 import type { AboutModel, AllEventsModel } from '@/components/pages/home/model/all_data';
 import CustomTitle from '@/components/pages/home/ui/common/CustomTitle.vue';
-import InteractiveLogos from '@/components/pages/home/ui/about-organization/ui/logos/InteractiveLogos.vue';
-import EventCard from '@/components/pages/home/ui/events/ui/event-card/EventCard.vue';
+import InteractiveLogos from '@/components/pages/home/ui/about-org-n-events/ui/logos/InteractiveLogos.vue';
+import EventCard from '@/components/pages/home/ui/about-org-n-events/ui/event-card/EventCard.vue';
 
 defineProps<{
   info: AboutModel;

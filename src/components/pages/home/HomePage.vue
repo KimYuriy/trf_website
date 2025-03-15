@@ -5,7 +5,7 @@
       @nav-clicked="scrollToSection"
     />
     <v-container
-      class="w-75"
+      :class="smAndUp? 'w-75' : 'w-100'"
       fluid
     >
       <v-row
@@ -59,6 +59,9 @@ import SocialMedia from '@/components/pages/home/ui/socialmedia/SocialMedia.vue'
 import Contacts from '@/components/pages/home/ui/contacts/Contacts.vue';
 import CustomFooter from '@/components/pages/home/ui/footer/Footer.vue';
 import AboutOrganizationNEvents from './ui/about-org-n-events/AboutOrganizationNEvents.vue';
+import { useDisplay } from 'vuetify';
+
+const { smAndUp } = useDisplay();
 
 const data = ref<AllDataModel | null>(null);
 

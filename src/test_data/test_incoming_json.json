@@ -10,7 +10,7 @@
             "name": "Мероприятие 1",
             "short_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus",
             "long_description":  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula, ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula, ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula, ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus",
-            "logo": "src/assets/images/logo_zh.png",
+            "logo": "src/assets/images/homa.jpg",
             "img": "src/assets/images/bg.png"
         },
         "edc": {
