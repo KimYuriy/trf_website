@@ -8,20 +8,20 @@
     :href="media.url"
   >
     <v-avatar
-      class="my-auto"
       rounded="0"
       :size="64"
       :image="media.logo"
     />
-    <div>
-      <v-card-title
+    <div :class="smAndUp? 'ml-5' : 'mt-5'">
+      <p
+        class="text-h5"
         :class="!smAndUp ? 'text-center' : ''"
       >
         {{ media.name }}
-      </v-card-title>
-      <v-card-text class=" text-justify">
+      </p>
+      <p class="text-body-1 text-justify">
         {{ media.description }}
-      </v-card-text>
+      </p>
     </div>
   </v-card>
 </template>
