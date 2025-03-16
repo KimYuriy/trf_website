@@ -117,6 +117,34 @@
             "description": "Описание какого-то инфоресурса 2",
             "logo": "src/assets/images/homa.jpg",
             "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+            "id": 0,
+            "name": "Какой-то инфоресурс 1",
+            "description": "Описание какого-то инфоресурса 1",
+            "logo": "src/assets/images/homa.jpg",
+            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+            "id": 0,
+            "name": "Какой-то инфоресурс 2",
+            "description": "Описание какого-то инфоресурса 2",
+            "logo": "src/assets/images/homa.jpg",
+            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+            "id": 0,
+            "name": "Какой-то инфоресурс 1",
+            "description": "Описание какого-то инфоресурса 1",
+            "logo": "src/assets/images/homa.jpg",
+            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+            "id": 0,
+            "name": "Какой-то инфоресурс 2",
+            "description": "Описание какого-то инфоресурса 2",
+            "logo": "src/assets/images/homa.jpg",
+            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
         }
     ],
     "contacts": [
