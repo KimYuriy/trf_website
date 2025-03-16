@@ -1,7 +1,7 @@
 <template>
- <v-card
-    class="d-flex justify-space-between my-5"
-    :class="smAndUp? `${index % 2 === 0 ? '' : 'flex-row-reverse'}` : 'flex-column align-center'"
+  <v-card
+    class="d-flex my-5 w-100"
+    :class="smAndUp ? `${index % 2 === 0 ? '' : 'flex-row-reverse'}` : 'flex-column align-center'"
     variant="text"
   >
     <v-img
@@ -9,13 +9,13 @@
       cover
       :alt="event.name"
       :width="smAndUp ? 300 : 500"
-      :gradient="smAndUp? `to ${index % 2 == 0 ? 'right' : 'left'}, rgba(0,0,0,.0), rgba(48,48,48,1)`: ''"
+      :gradient="smAndUp ? `to ${index % 2 == 0 ? 'right' : 'left'}, rgba(0,0,0,.0), rgba(48,48,48,1)` : ''"
       :src="event.img"
     />
-    <div>
+    <div class="flex-grow-1 w-100">
       <v-card-title
         class="text-h4"
-        :class="!smAndUp? 'text-center' : ''"
+        :class="!smAndUp ? 'text-center' : ''"
       >
         {{ event.name }}
       </v-card-title>
