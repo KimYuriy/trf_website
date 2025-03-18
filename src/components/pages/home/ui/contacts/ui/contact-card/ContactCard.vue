@@ -6,7 +6,7 @@
   >
     <v-avatar
       :size="192"
-      :image="contact.logo"
+      :image="contact.logo.url"
     />
     <div>
       <v-card-title

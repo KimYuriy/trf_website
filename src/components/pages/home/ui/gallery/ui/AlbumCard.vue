@@ -7,7 +7,7 @@
     <v-img
       class="align-end"
       cover
-      :src="album.logo"
+      :src="album.logo.url"
     >
       <v-card-title
         class="text-h5 text-white text-pre-line"

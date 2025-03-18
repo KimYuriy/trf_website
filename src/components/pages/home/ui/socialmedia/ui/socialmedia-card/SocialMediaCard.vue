@@ -10,7 +10,7 @@
     <v-avatar
       rounded="0"
       :size="64"
-      :image="media.logo"
+      :image="media.logo.url"
     />
     <div :class="smAndUp? 'ml-5' : 'mt-5'">
       <p

@@ -1,10 +1,16 @@
 export interface IAllData {
   about: IAbout;
-  events: IAllEvents;
+  events: IEvent[];
   gallery: IPhotoAlbum[];
   partners: IDataUrl[];
   socialmedias: IDataUrl[];
   contacts: IDataUrl[];
+}
+
+export interface ILogo {
+  id: number;
+  url: string;
+  position: 'top' | 'center' | 'left' | 'right' | undefined;
 }
 
 export interface IAbout {
@@ -13,19 +19,12 @@ export interface IAbout {
   description: string;
 }
 
-export interface IAllEvents {
-  zh: IEvent;
-  edc: IEvent;
-  dvudulka: IEvent;
-  rus: IEvent;
-}
-
 export interface IEvent {
   id: number;
   name: string;
   short_description: string;
   long_description: string;
-  logo: string;
+  logo: ILogo;
   img: string
 }
 
@@ -33,7 +32,7 @@ export interface IPhotoAlbum {
   id: number;
   name: string;
   description: string;
-  logo: string;
+  logo: ILogo;
   url: string;
   backgroundImg: string;
 }
@@ -42,8 +41,20 @@ export interface IDataUrl {
   id: number;
   name: string;
   description: string;
-  logo: string;
+  logo: ILogo;
   url: string
+}
+
+export class LogoModel {
+  constructor(json: ILogo) {
+    this.id = json.id;
+    this.url = json.url;
+    this.position = json.position ?? undefined;
+  }
+
+  id: number;
+  url: string;
+  position: 'top' | 'center' | 'left' | 'right' | undefined;
 }
 
 export class DataModel {
@@ -51,29 +62,15 @@ export class DataModel {
     this.id = json.id;
     this.name = json.name;
     this.description = json.description;
-    this.logo = json.logo;
+    this.logo = new LogoModel(json.logo);
     this.url = json.url;
   }
 
   id: number;
   name: string;
   description: string;
-  logo: string;
+  logo: LogoModel;
   url: string;
-}
-
-export class AllEventsModel {
-  constructor(json: IAllEvents) {
-    this.zh = new EventModel(json.zh);
-    this.edc = new EventModel(json.edc);
-    this.dvudulka = new EventModel(json.dvudulka);
-    this.rus = new EventModel(json.rus);
-  }
-
-  zh: EventModel;
-  edc: EventModel;
-  dvudulka: EventModel;
-  rus: EventModel;
 }
 
 export class EventModel {
@@ -82,7 +79,7 @@ export class EventModel {
     this.name = json.name;
     this.shortDescription = json.short_description;
     this.longDescription = json.long_description;
-    this.logo = json.logo;
+    this.logo = new LogoModel(json.logo);
     this.img = json.img;
   }
 
@@ -90,7 +87,7 @@ export class EventModel {
   name: string;
   shortDescription: string;
   longDescription: string;
-  logo: string;
+  logo: LogoModel;
   img: string;
 }
 
@@ -111,7 +108,7 @@ export class PhotoAlbumModel {
     this.id = json.id;
     this.name = json.name;
     this.description = json.description;
-    this.logo = json.logo;
+    this.logo = new LogoModel(json.logo);
     this.url = json.url;
     this.backgroundImg = json.backgroundImg;
   }
@@ -119,7 +116,7 @@ export class PhotoAlbumModel {
   id: number;
   name: string;
   description: string;
-  logo: string;
+  logo: LogoModel;
   url: string;
   backgroundImg: string;
 }
@@ -127,7 +124,7 @@ export class PhotoAlbumModel {
 export class AllDataModel {
   constructor(json: IAllData) {
     this.about = new AboutModel(json.about);
-    this.events = new AllEventsModel(json.events);
+    this.events = json.events.map(event => new EventModel(event));
     this.gallery = json.gallery.map(album => new PhotoAlbumModel(album));
     this.partners = json.partners.map(partner => new DataModel(partner));
     this.socialmedias = json.socialmedias.map(social => new DataModel(social));
@@ -135,7 +132,7 @@ export class AllDataModel {
   }
 
   about: AboutModel;
-  events: AllEventsModel;
+  events: EventModel[];
   gallery: PhotoAlbumModel[];
   partners: DataModel[];
   socialmedias: DataModel[];

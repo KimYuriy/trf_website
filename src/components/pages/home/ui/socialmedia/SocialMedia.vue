@@ -1,6 +1,6 @@
 <template>
   <v-container
-    class="ma-0 pa-0 my-5"
+    class="ma-0 pa-0 mt-10"
     fluid
   >
     <custom-title text="Социальные сети" />

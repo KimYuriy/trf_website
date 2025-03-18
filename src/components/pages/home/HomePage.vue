@@ -37,12 +37,11 @@
             id="social"
             :socials="data!.socialmedias"
           />
-
         </v-col>
       </v-row>
     </v-container>
     <custom-footer
-      :name="data!.about.name"
+      :title="data!.about.name"
       @nav-clicked="scrollToSection"
     />
   </div>

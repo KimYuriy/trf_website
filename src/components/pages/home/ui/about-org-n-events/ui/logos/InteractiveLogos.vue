@@ -7,7 +7,7 @@
           <v-col cols="3">
             <glitch-logo
               tooltip-location="end"
-              :event="dvudulka"
+              :event="events.find(event => event.logo.position === 'top')"
               @event-clicked="eventClicked"
             />
           </v-col>
@@ -19,7 +19,7 @@
           <v-col cols="3">
             <glitch-logo
               tooltip-location="top"
-              :event="edc"
+              :event="events.find(event => event.logo.position === 'left')"
               @event-clicked="eventClicked"
             />
           </v-col>
@@ -29,14 +29,14 @@
           >
             <glitch-logo
               tooltip-location="bottom"
-              :event="zh"
+              :event="events.find(event => event.logo.position === 'center')"
               @event-clicked="eventClicked"
             />
           </v-col>
           <v-col cols="3">
             <glitch-logo
               tooltip-location="top"
-              :event="rus"
+              :event="events.find(event => event.logo.position === 'right')"
               @event-clicked="eventClicked"
             />
           </v-col>
@@ -49,17 +49,12 @@
 import type { EventModel } from '@/components/pages/home/model/all_data';
 import GlitchLogo from '@/components/pages/home/ui/about-org-n-events/ui/logos/GlitchLogo.vue';
 
-interface ILogos {
-  zh: EventModel;
-  edc: EventModel;
-  dvudulka: EventModel;
-  rus: EventModel;
-}
-
-defineProps<ILogos>();
+defineProps<{
+  events: EventModel[];
+}>();
 
 const emit = defineEmits<{
-  eventClicked: [id: number]
+  eventClicked: [id: number];
 }>();
 
 const eventClicked = (id: number) => emit('eventClicked', id);

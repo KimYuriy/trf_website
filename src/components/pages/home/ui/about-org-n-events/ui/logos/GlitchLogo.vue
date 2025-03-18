@@ -2,21 +2,21 @@
 <template>
   <v-tooltip
     :location="tooltipLocation"
-    :text="event.shortDescription"
+    :text="event?.shortDescription"
   >
     <template #activator="{ props }">
       <div
-      v-bind="props"
+        v-bind="props"
         class="container"
-        @click="emit('eventClicked', event.id)"
+        @click="emit('eventClicked', event!.id)"
       >
         <div
           class="img"
-          :style="{ backgroundImage: `url(${event.logo})` }"
+          :style="{ backgroundImage: `url(${event?.logo.url})` }"
         />
         <div
           class="glitch"
-          :style="{ backgroundImage: `url(${event.logo})` }"
+          :style="{ backgroundImage: `url(${event?.logo.url})` }"
         />
       </div>
     </template>
@@ -28,11 +28,11 @@ import type { EventModel } from '@/components/pages/home/model/all_data';
 
 defineProps<{
   tooltipLocation: 'top' | 'bottom' | 'start' | 'end';
-  event: EventModel
+  event: EventModel | undefined
 }>();
 
 const emit = defineEmits<{
-  eventClicked: [id: number]
+  eventClicked: [id: number];
 }>();
 </script>
 
