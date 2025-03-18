@@ -1,9 +1,9 @@
 <template>
   <v-card
-    class="card d-flex flex-column align-center justify-center"
+    class="card d-flex flex-column align-center justify-space-between"
     :class="index % 2 === 0 ? '' : 'flex-column-reverse'"
     variant="text"
-    max-width="200"
+    :max-width="cardWidth"
   >
     <a
       target="_blank"
@@ -13,11 +13,11 @@
         cover
         aspect-ratio="1"
         :src="partner.logo.url"
-        width="200"
+        :width="cardWidth"
       />
     </a>
-    <div>
-      <p class="mt-3 text-h5 text-center">
+    <div :class="index % 2 === 0 ? 'mt-3' : 'mb-3'">
+      <p class="text-h5 text-center">
         {{ partner.name }}
       </p>
       <p class="mt-3 text-body-1 text-justify">
@@ -34,6 +34,8 @@ defineProps<{
   partner: DataModel;
   index: number;
 }>();
+
+const cardWidth = 200;
 </script>
 
 <style scoped>
