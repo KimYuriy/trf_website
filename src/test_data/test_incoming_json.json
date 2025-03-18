@@ -141,6 +141,66 @@
                 "url": "src/assets/images/homa.jpg"
             },
             "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+            "id": 0,
+            "name": "Название партнёра 1",
+            "description": "Краткое описание партнёра 1 Краткое описание партнёра 1 Краткое описание партнёра 1 Краткое описание партнёра 1 Краткое описание партнёра 1 ",
+            "logo": {
+                "id": -1,
+                "url": "src/assets/images/homa.jpg"
+            },
+            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+            "id": 0,
+            "name": "Название партнёра 2",
+            "description": "Краткое описание партнёра 2",
+            "logo": {
+                "id": -1,
+                "url": "src/assets/images/homa.jpg"
+            },
+            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+            "id": 0,
+            "name": "Название партнёра 3",
+            "description": "Краткое описание партнёра 3",
+            "logo": {
+                "id": -1,
+                "url": "src/assets/images/homa.jpg"
+            },
+            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+            "id": 0,
+            "name": "Название партнёра 1",
+            "description": "Краткое описание партнёра 1 Краткое описание партнёра 1 Краткое описание партнёра 1 Краткое описание партнёра 1 Краткое описание партнёра 1 ",
+            "logo": {
+                "id": -1,
+                "url": "src/assets/images/homa.jpg"
+            },
+            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+            "id": 0,
+            "name": "Название партнёра 2",
+            "description": "Краткое описание партнёра 2",
+            "logo": {
+                "id": -1,
+                "url": "src/assets/images/homa.jpg"
+            },
+            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+            "id": 0,
+            "name": "Название партнёра 3",
+            "description": "Краткое описание партнёра 3",
+            "logo": {
+                "id": -1,
+                "url": "src/assets/images/homa.jpg"
+            },
+            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
         }
     ],
     "socialmedias": [

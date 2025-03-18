@@ -1,6 +1,7 @@
 <template>
   <v-card
     class="card d-flex flex-column align-center justify-center"
+    :class="index % 2 === 0 ? '' : 'flex-column-reverse'"
     variant="text"
     max-width="200"
   >
@@ -15,12 +16,14 @@
         width="200"
       />
     </a>
-    <p class="mt-3 text-h5 text-center">
-      {{ partner.name }}
-    </p>
-    <p class="mt-3 text-body-1">
-        {{ partner.description }}
-    </p>
+    <div>
+      <p class="mt-3 text-h5 text-center">
+        {{ partner.name }}
+      </p>
+      <p class="mt-3 text-body-1 text-justify">
+          {{ partner.description }}
+      </p>
+    </div>
   </v-card>
 </template>
 
@@ -28,7 +31,8 @@
 import type { DataModel } from '@/components/pages/home/model/all_data';
 
 defineProps<{
-  partner: DataModel
+  partner: DataModel;
+  index: number;
 }>();
 </script>
 
