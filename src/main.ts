@@ -7,7 +7,7 @@ import 'vuetify/styles'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 import { createVuetify } from 'vuetify'
-import { customTheme } from './theme/custom_theme'
+import { customTheme } from '@/theme/custom_theme'
 import '@/theme/fonts/bahnschrift.css'
 
 const vuetify = createVuetify({
@@ -27,4 +27,4 @@ const vuetify = createVuetify({
 createApp(App)
   .use(router)
   .use(vuetify)
-  .mount('#app')
+  .mount('#app');
