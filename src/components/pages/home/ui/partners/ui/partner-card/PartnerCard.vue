@@ -18,10 +18,10 @@
     </a>
     <div :class="index % 2 === 0 ? 'mt-3' : 'mb-3'">
       <p class="text-h5 text-center">
-        {{ partner.name }}
+        <rich-text :text="partner.name" />
       </p>
       <p class="mt-3 text-body-1 text-justify">
-          {{ partner.description }}
+        <rich-text :text="partner.description" />
       </p>
     </div>
   </v-card>
@@ -29,6 +29,7 @@
 
 <script setup lang="ts">
 import type { DataModel } from '@/components/pages/home/model/all_data';
+import RichText from '@/components/pages/home/ui/common/RichText.vue';
 
 defineProps<{
   partner: DataModel;

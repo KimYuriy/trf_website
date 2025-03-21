@@ -9,7 +9,7 @@
       justify="center"
     >
       <v-col cols="12">
-        {{ text }}
+        <rich-text :text="text" />
       </v-col>
     </v-row>
   </v-container>
@@ -17,6 +17,7 @@
 
 <script setup lang="ts">
 import { onBeforeMount, ref } from 'vue';
+import RichText from '@/components/pages/home/ui/common/RichText.vue';
 
 const text = ref<string>('В разработке');
 

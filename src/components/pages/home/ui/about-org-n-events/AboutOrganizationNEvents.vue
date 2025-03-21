@@ -23,7 +23,7 @@
       </v-row>
     
       <v-card-text class="text-h6 text-justify">
-        {{ info.description }}
+        <rich-text :text="info.description" />
       </v-card-text>
     </div>
 
@@ -61,7 +61,7 @@
             />
           </v-expansion-panel-title>
           <v-expansion-panel-text class="text-body-1 text-justify">
-            {{ event.longDescription }}
+            <rich-text :text="event.longDescription"/>
           </v-expansion-panel-text>
         </v-expansion-panel>
       </v-expansion-panels>
@@ -75,6 +75,7 @@ import type { AboutModel, EventModel } from '@/components/pages/home/model/all_d
 import CustomTitle from '@/components/pages/home/ui/common/CustomTitle.vue';
 import InteractiveLogos from '@/components/pages/home/ui/about-org-n-events/ui/logos/InteractiveLogos.vue';
 import EventCard from '@/components/pages/home/ui/about-org-n-events/ui/event-card/EventCard.vue';
+import RichText from '@/components/pages/home/ui/common/RichText.vue';
 
 defineProps<{
   info: AboutModel;

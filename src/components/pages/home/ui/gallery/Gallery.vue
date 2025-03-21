@@ -10,7 +10,10 @@
       height="425"
       hide-delimiters
       cycle
-      :style="{ backgroundImage: `url(${backgroundImageUrl})`, backgroundSize: 'cover' }"
+      :style="{
+        backgroundImage: `url(${backgroundImageUrl})`,
+        backgroundSize: 'cover'
+      }"
     >
       <v-carousel-item v-for="album in albums">
         <album-card :album="album" />

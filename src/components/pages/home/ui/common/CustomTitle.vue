@@ -3,11 +3,13 @@
     class="text-uppercase text-center font-weight-bold custom-font"
     :class="textStyle"
   >
-    {{ text }}
+    <rich-text :text="text" />
   </p>
 </template>
 
 <script setup lang="ts">
+import RichText from '@/components/pages/home/ui/common/RichText.vue';
+
 withDefaults(
   defineProps<{
     text: string,

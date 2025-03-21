@@ -13,10 +13,10 @@
         class="text-h4"
         :class="!smAndUp? 'text-center' : ''"
       >
-        {{ contact.name }}
+        <rich-text :text="contact.name" />
       </v-card-title>
       <v-card-text class="text-h6 text-justify">
-        {{ contact.description }}
+        <rich-text :text="contact.description" />
       </v-card-text>
     </div>
   </v-card>
@@ -25,6 +25,7 @@
 <script setup lang="ts">
 import { useDisplay } from 'vuetify';
 import type { DataModel } from '@/components/pages/home/model/all_data';
+import RichText from '@/components/pages/home/ui/common/RichText.vue';
 
 defineProps<{
   contact: DataModel

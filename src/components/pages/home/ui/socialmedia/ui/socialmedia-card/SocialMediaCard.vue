@@ -17,10 +17,10 @@
         class="text-h5"
         :class="!smAndUp ? 'text-center' : ''"
       >
-        {{ media.name }}
+        <rich-text :text="media.name" />
       </p>
       <p class="text-body-1 text-justify">
-        {{ media.description }}
+        <rich-text :text="media.description" />
       </p>
     </div>
   </v-card>
@@ -29,6 +29,7 @@
 <script setup lang="ts">
 import { useDisplay } from 'vuetify';
 import type { DataModel } from '@/components/pages/home/model/all_data';
+import RichText from '@/components/pages/home/ui/common/RichText.vue';
 
 defineProps<{
   media: DataModel
