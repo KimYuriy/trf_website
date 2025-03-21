@@ -14,6 +14,7 @@
     <v-slide-group
       class="mt-5"
       center-active
+      show-arrows
     >
       <v-slide-group-item v-for="(partner, index) in partners">
         <partner-card

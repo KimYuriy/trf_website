@@ -5,7 +5,7 @@
       @nav-clicked="scrollToSection"
     />
     <v-container
-      :class="smAndUp? 'w-75' : 'w-100'"
+      :class="contentWidth"
       fluid
     >
       <v-row
@@ -48,8 +48,9 @@
 </template>
 
 <script setup lang="ts">
-import { onBeforeMount, ref } from 'vue';
-import { AllDataModel, type IAllData } from './model/all_data';
+import { computed, onBeforeMount, ref } from 'vue';
+import { useDisplay } from 'vuetify';
+import { AllDataModel, type IAllData } from '@/components/pages/home/model/all_data';
 import testJson from '@/test_data/test_incoming_json.json';
 import AppBar from '@/components/pages/home/ui/app-bar/AppBar.vue';
 import Gallery from '@/components/pages/home/ui/gallery/Gallery.vue';
@@ -57,10 +58,9 @@ import Partners from '@/components/pages/home/ui/partners/Partners.vue';
 import SocialMedia from '@/components/pages/home/ui/socialmedia/SocialMedia.vue';
 import Contacts from '@/components/pages/home/ui/contacts/Contacts.vue';
 import CustomFooter from '@/components/pages/home/ui/footer/Footer.vue';
-import AboutOrganizationNEvents from './ui/about-org-n-events/AboutOrganizationNEvents.vue';
-import { useDisplay } from 'vuetify';
+import AboutOrganizationNEvents from '@/components/pages/home/ui/about-org-n-events/AboutOrganizationNEvents.vue';
 
-const { smAndUp } = useDisplay();
+const { smAndUp, xlAndUp } = useDisplay();
 
 const data = ref<AllDataModel | null>(null);
 
@@ -79,5 +79,15 @@ const scrollToSection = (sectionId: string) => {
 onBeforeMount(() => {
   //TODO: сделать получение JSON с сервера
   data.value = new AllDataModel(testJson as IAllData);
+});
+
+const contentWidth = computed(() => {
+  if (xlAndUp.value) {
+    return 'w-33';
+  }
+  if (smAndUp.value) {
+    return 'w-75';
+  }
+  return 'w-100';
 });
 </script>

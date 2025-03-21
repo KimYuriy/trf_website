@@ -10,7 +10,7 @@
         :text="info.name"
       />
       <v-row
-        v-if="smAndUp"
+        v-if="events.length > 0 && smAndUp"
         align="center"
         justify="center"
       >
@@ -28,6 +28,7 @@
     </div>
 
     <div
+      v-if="events.length > 0"
       class="my-5"
       id="events"
     >
