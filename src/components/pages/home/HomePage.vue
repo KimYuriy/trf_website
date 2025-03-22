@@ -59,10 +59,13 @@ import SocialMedia from '@/components/pages/home/ui/socialmedia/SocialMedia.vue'
 import Contacts from '@/components/pages/home/ui/contacts/Contacts.vue';
 import CustomFooter from '@/components/pages/home/ui/footer/Footer.vue';
 import AboutOrganizationNEvents from '@/components/pages/home/ui/about-org-n-events/AboutOrganizationNEvents.vue';
+import { HomeApi } from './network/home_api';
 
 const { smAndUp, xlAndUp } = useDisplay();
 
 const data = ref<AllDataModel | null>(null);
+
+const homeApi = new HomeApi('/api/summary');
 
 const scrollToSection = (sectionId: string) => {
   const element = document.getElementById(sectionId);
@@ -77,9 +80,15 @@ const scrollToSection = (sectionId: string) => {
 };
 
 onBeforeMount(() => {
-  //TODO: сделать получение JSON с сервера
-  data.value = new AllDataModel(testJson as IAllData);
-});
+  homeApi.getContent()
+    .then((response) => {
+      data.value = new AllDataModel(response);
+    })
+    .catch((error) => {
+      data.value = new AllDataModel(testJson as IAllData);
+    });
+
+  });
 
 const contentWidth = computed(() => {
   if (xlAndUp.value) {
