@@ -33,33 +33,33 @@ const router = createRouter({
   routes: routes,
 });
 
-// Флаг для отслеживания программных переходов
-let isProgrammaticNavigation = false;
+// // Флаг для отслеживания программных переходов
+// let isProgrammaticNavigation = false;
 
-// Список запрещенных путей для прямого перехода
-const restrictedPaths = ['/', '/in-progress', '/error'];
+// // Список запрещенных путей для прямого перехода
+// const restrictedPaths = ['/', '/in-progress', '/error'];
 
-// Глобальный хук beforeEach
-router.beforeEach((to, from, next) => {
-  if (restrictedPaths.includes(to.path) && !isProgrammaticNavigation) {
-    // Если путь запрещен и переход не программный, перенаправляем на страницу 404 или другую
-    next('/no-such-page'); // или next('/home') для перенаправления на главную
-  } else {
-    // Разрешаем переход
-    next();
-  }
-});
+// // Глобальный хук beforeEach
+// router.beforeEach((to, from, next) => {
+//   if (restrictedPaths.includes(to.path) && !isProgrammaticNavigation) {
+//     // Если путь запрещен и переход не программный, перенаправляем на страницу 404 или другую
+//     next('/no-such-page'); // или next('/home') для перенаправления на главную
+//   } else {
+//     // Разрешаем переход
+//     next();
+//   }
+// });
 
-// Перехватываем все программные переходы
-router.afterEach(() => {
-  isProgrammaticNavigation = false;
-});
+// // Перехватываем все программные переходы
+// router.afterEach(() => {
+//   isProgrammaticNavigation = false;
+// });
 
-// Переопределяем метод push, чтобы установить флаг
-const originalPush = router.push;
-router.push = function push(location) {
-  isProgrammaticNavigation = true;
-  return originalPush.call(this, location);
-};
+// // Переопределяем метод push, чтобы установить флаг
+// const originalPush = router.push;
+// router.push = function push(location) {
+//   isProgrammaticNavigation = true;
+//   return originalPush.call(this, location);
+// };
 
 export default router;
