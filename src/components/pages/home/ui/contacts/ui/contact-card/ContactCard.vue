@@ -1,7 +1,7 @@
 <template>
   <v-card
     class="d-flex"
-    :class="smAndUp? '' : 'flex-column align-center'"
+    :class="{ 'flex-column align-center': !smAndUp }"
     variant="text"
   >
     <v-avatar

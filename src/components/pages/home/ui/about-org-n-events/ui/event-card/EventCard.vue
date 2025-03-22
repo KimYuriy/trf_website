@@ -6,11 +6,9 @@
   >
     <v-img
       :class="smAndUp && index % 2 === 0 ? 'mr-5' : 'ml-5'"
-      cover
+      aspect-ratio="16/9"
       :alt="event.name"
       :width="smAndUp ? 300 : 500"
-      aspect-ratio="16/9"
-      :gradient="smAndUp ? `to ${index % 2 == 0 ? 'right' : 'left'}, rgba(0,0,0,.0), rgba(48,48,48,1)` : ''"
       :src="event.img"
     />
     <div class="w-100">
