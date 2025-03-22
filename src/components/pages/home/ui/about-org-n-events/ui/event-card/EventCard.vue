@@ -9,19 +9,20 @@
       cover
       :alt="event.name"
       :width="smAndUp ? 300 : 500"
+      aspect-ratio="16/9"
       :gradient="smAndUp ? `to ${index % 2 == 0 ? 'right' : 'left'}, rgba(0,0,0,.0), rgba(48,48,48,1)` : ''"
       :src="event.img"
     />
-    <div class="flex-grow-1 w-100">
-      <v-card-title
+    <div class="w-100">
+      <p
         class="text-h4"
-        :class="!smAndUp ? 'text-center' : ''"
+        :class="{ 'text-center mt-2': !smAndUp }"
       >
         <rich-text :text="event.name"/>
-      </v-card-title>
-      <v-card-text class="text-h6 text-justify">
+      </p>
+      <p class="text-h6 text-justify">
         <rich-text :text="event.shortDescription"/>
-      </v-card-text>
+      </p>
     </div>
   </v-card>
 </template>

@@ -8,16 +8,16 @@
       :size="192"
       :image="contact.logo.url"
     />
-    <div>
-      <v-card-title
+    <div :class="{ 'ml-5': smAndUp }">
+      <p
         class="text-h4"
-        :class="!smAndUp? 'text-center' : ''"
+        :class="{ 'text-center mt-2': !smAndUp }"
       >
         <rich-text :text="contact.name" />
-      </v-card-title>
-      <v-card-text class="text-h6 text-justify">
+      </p>
+      <p class="text-h6 text-justify">
         <rich-text :text="contact.description" />
-      </v-card-text>
+      </p>
     </div>
   </v-card>
 </template>
