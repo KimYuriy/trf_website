@@ -1,3 +1,4 @@
+import ErrorPage from '@/components/pages/error/ErrorPage.vue';
 import HomePage from '@/components/pages/home/HomePage.vue'
 import InProgressPage from '@/components/pages/in-progress/InProgressPage.vue';
 import LoadingPage from '@/components/pages/loading/LoadingPage.vue';
@@ -15,8 +16,11 @@ const routes = [
   {
     path: '/in-progress',
     component: InProgressPage,
+  },
+  {
+    path: '/error',
+    component: ErrorPage
   }
-
 ];
 
 const router = createRouter({

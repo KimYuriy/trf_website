@@ -65,7 +65,7 @@ const { smAndUp, xlAndUp } = useDisplay();
 
 const data = ref<AllDataModel | null>(null);
 
-const homeApi = new HomeApi('/api/summary');
+const homeApi = new HomeApi('/summary');
 
 const scrollToSection = (sectionId: string) => {
   const element = document.getElementById(sectionId);
@@ -84,7 +84,11 @@ onBeforeMount(() => {
     .then((response) => {
       data.value = new AllDataModel(response);
     })
-    .catch((error) => {
+    .catch(() => {
+      //TODO: раскомментировать
+      //  router.replace('/error');
+      
+      //TODO: удалить
       data.value = new AllDataModel(testJson as IAllData);
     });
 

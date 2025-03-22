@@ -9,7 +9,7 @@
       justify="center"
     >
       <v-col cols="12">
-        <rich-text :text="text" />
+        <rich-text :text="shownText" />
       </v-col>
     </v-row>
   </v-container>
@@ -17,12 +17,19 @@
 
 <script setup lang="ts">
 import { onBeforeMount, ref } from 'vue';
+import { InProgressApi } from '@/components/pages/in-progress/network/in_progress_api';
 import RichText from '@/components/pages/home/ui/common/RichText.vue';
+import router from '@/router';
 
-const text = ref<string>('В разработке');
+const shownText = ref<string>('В разработке');
 
-onBeforeMount(() => {
-  //TODO: Сделать запрос на получение текста для надписи
+//TODO: Заменить на реальный эндпоинт
+const inProgressApi = new InProgressApi('');
+
+onBeforeMount(async () => {
+  inProgressApi.getText()
+    .then((text) => shownText.value = text)
+    .catch(() => router.replace('/error'))
 });
 </script>
 

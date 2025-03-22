@@ -23,12 +23,18 @@
 <script setup lang="ts">
 import router from '@/router';
 import { onBeforeMount } from 'vue';
+import { LoadingApi } from './network/loading_api';
 
-onBeforeMount(() => {
-  //TODO: сделать запрос на статус сайта "В разработке" или нет
-  // Отправляем запрос на получение статуса, получаем ответ
-  // Если статус - true, то выполняем router.replace('/in-progress')
-  // Если статус - false, то выполняем router.replace('/home')
+//TODO: заменить эндпоинт на реальный
+const loadingApi = new LoadingApi('/endpoint');
+
+onBeforeMount(async () => {
+  //TODO: раскомментировать
+  // loadingApi.getStatus()
+  //   .then((isWIP) => router.replace(isWIP ? '/in-progress' : '/home'))
+  //   .catch(() => router.replace('/error'));
+
+  //TODO: удалить
   router.replace('/home');
 });
 </script>
