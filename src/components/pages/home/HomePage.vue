@@ -79,7 +79,7 @@ const scrollToSection = (sectionId: string) => {
   }
 };
 
-onBeforeMount(() => {
+onBeforeMount(async () => {
   homeApi.getContent()
     .then((response) => {
       data.value = new AllDataModel(response);

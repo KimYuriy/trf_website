@@ -1,0 +1,30 @@
+<template>
+  <v-container
+    class="fill-height"
+    fluid
+  >
+    <v-row
+      class="text-center text-h5"
+      align="center"
+      justify="center"
+    >
+      <v-col cols="12">
+        <rich-text :text="text" />
+        <router-link to="/">На главную</router-link>
+      </v-col>
+    </v-row>
+  </v-container>
+</template>
+
+<script setup lang="ts">
+import { ref } from 'vue';
+import RichText from '@/components/pages/home/ui/common/RichText.vue';
+
+const text = ref<string>('Страница, которую Вы пытаетесь открыть, не существует');
+</script>
+
+<style scoped>
+.fill-height {
+  height: 100vh;
+}
+</style>
