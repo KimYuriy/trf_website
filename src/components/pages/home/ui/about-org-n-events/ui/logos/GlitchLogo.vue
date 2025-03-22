@@ -2,7 +2,6 @@
 <template>
   <v-tooltip
     :location="tooltipLocation"
-    :text="event?.shortDescription"
   >
     <template #activator="{ props }">
       <div
@@ -20,11 +19,16 @@
         />
       </div>
     </template>
+    <div>
+      <span class="text-h5">{{ event?.name }}</span>
+      <rich-text :text="event?.shortDescription" />
+    </div>
   </v-tooltip>
 </template>
 
 <script setup lang="ts">
 import type { EventModel } from '@/components/pages/home/model/all_data';
+import RichText from '@/components/pages/home/ui/common/RichText.vue';
 
 defineProps<{
   tooltipLocation: 'top' | 'bottom' | 'start' | 'end';
