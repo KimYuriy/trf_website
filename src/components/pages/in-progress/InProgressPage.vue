@@ -4,7 +4,7 @@
     fluid
   >
     <v-row
-      class="text-center text-h2 text-uppercase"
+      class="text-center text-h2"
       align="center"
       justify="center"
     >
@@ -29,7 +29,10 @@ const inProgressApi = new InProgressApi('');
 onBeforeMount(async () => {
   inProgressApi.getText()
     .then((text) => shownText.value = text)
-    .catch(() => router.replace('/error'))
+    .catch(() => {
+      sessionStorage.setItem('navigation.error', 'true');
+      router.replace('/error');
+    })
 });
 </script>
 

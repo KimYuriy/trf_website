@@ -31,10 +31,17 @@ const loadingApi = new LoadingApi('/endpoint');
 onBeforeMount(async () => {
   //TODO: раскомментировать
   // loadingApi.getStatus()
-  //   .then((isWIP) => router.replace(isWIP ? '/in-progress' : '/home'))
-  //   .catch(() => router.replace('/error'));
+  //   .then((isWIP) => {
+  //     sessionStorage.setItem(`navigation.${isWIP ? 'in-progress' : 'home'}`, 'true');
+  //     router.replace(isWIP ? '/in-progress' : '/home');
+  //   })
+  //   .catch(() => {
+  //     sessionStorage.setItem('navigation.error', 'true');
+  //     router.replace('/error');
+  //   });
 
   //TODO: удалить
+  sessionStorage.setItem('navigation.home', 'true');
   router.replace('/home');
 });
 </script>

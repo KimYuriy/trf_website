@@ -86,7 +86,8 @@ onBeforeMount(async () => {
     })
     .catch(() => {
       //TODO: раскомментировать
-      //  router.replace('/error');
+      // sessionStorage.setItem('navigation.error', 'true');
+      // router.replace('/error');
       
       //TODO: удалить
       data.value = new AllDataModel(testJson as IAllData);

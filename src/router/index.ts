@@ -13,14 +13,39 @@ const routes = [
   {
     path: '/home',
     component: HomePage,
+    beforeEnter: (to, from, next) => {
+      if (!sessionStorage.getItem('navigation.home')) {
+        next('/no-such-page');
+      } else {
+        sessionStorage.removeItem('navigation.home');
+        next();
+      }
+    }
   },
   {
     path: '/in-progress',
     component: InProgressPage,
+    beforeEnter: (to, from, next) => {
+      if (!sessionStorage.getItem('navigation.in-progress')) {
+        next('/no-such-page');
+      } else {
+        sessionStorage.removeItem('navigation.in-progress');
+        next();
+      }
+    }
   },
+,
   {
     path: '/error',
     component: ErrorPage,
+    beforeEnter: (to, from, next) => {
+      if (!sessionStorage.getItem('navigation.error')) {
+        next('/no-such-page');
+      } else {
+        sessionStorage.removeItem('navigation.error');
+        next();
+      }
+    }
   },
   {
     path: '/:catchAll(.*)',
@@ -32,34 +57,4 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: routes,
 });
-
-// // Флаг для отслеживания программных переходов
-// let isProgrammaticNavigation = false;
-
-// // Список запрещенных путей для прямого перехода
-// const restrictedPaths = ['/', '/in-progress', '/error'];
-
-// // Глобальный хук beforeEach
-// router.beforeEach((to, from, next) => {
-//   if (restrictedPaths.includes(to.path) && !isProgrammaticNavigation) {
-//     // Если путь запрещен и переход не программный, перенаправляем на страницу 404 или другую
-//     next('/no-such-page'); // или next('/home') для перенаправления на главную
-//   } else {
-//     // Разрешаем переход
-//     next();
-//   }
-// });
-
-// // Перехватываем все программные переходы
-// router.afterEach(() => {
-//   isProgrammaticNavigation = false;
-// });
-
-// // Переопределяем метод push, чтобы установить флаг
-// const originalPush = router.push;
-// router.push = function push(location) {
-//   isProgrammaticNavigation = true;
-//   return originalPush.call(this, location);
-// };
-
 export default router;

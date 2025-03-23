@@ -10,7 +10,12 @@
     >
       <v-col cols="12">
         <rich-text :text="text" />
-        <router-link to="/">На главную</router-link>
+        <router-link
+          class="mt-5"
+          to="/"
+        >
+          Вернуться на главную
+        </router-link>
       </v-col>
     </v-row>
   </v-container>
