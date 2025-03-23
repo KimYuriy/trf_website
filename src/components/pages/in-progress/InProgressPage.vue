@@ -17,9 +17,9 @@
 
 <script setup lang="ts">
 import { onBeforeMount, ref } from 'vue';
+import router from '@/router';
 import { InProgressApi } from '@/components/pages/in-progress/network/in_progress_api';
 import RichText from '@/components/pages/home/ui/common/RichText.vue';
-import router from '@/router';
 
 const shownText = ref<string>('В разработке');
 

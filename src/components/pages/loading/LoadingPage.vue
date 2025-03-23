@@ -21,9 +21,9 @@
 </template>
 
 <script setup lang="ts">
-import router from '@/router';
 import { onBeforeMount } from 'vue';
-import { LoadingApi } from './network/loading_api';
+import router from '@/router';
+import { LoadingApi } from '@/components/pages/loading/network/loading_api';
 
 //TODO: заменить эндпоинт на реальный
 const loadingApi = new LoadingApi('/endpoint');

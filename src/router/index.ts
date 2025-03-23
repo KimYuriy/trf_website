@@ -15,7 +15,7 @@ const routes = [
     component: HomePage,
     beforeEnter: (to, from, next) => {
       if (!sessionStorage.getItem('navigation.home')) {
-        next('/no-such-page');
+        next('/');
       } else {
         sessionStorage.removeItem('navigation.home');
         next();
@@ -27,20 +27,19 @@ const routes = [
     component: InProgressPage,
     beforeEnter: (to, from, next) => {
       if (!sessionStorage.getItem('navigation.in-progress')) {
-        next('/no-such-page');
+        next('/');
       } else {
         sessionStorage.removeItem('navigation.in-progress');
         next();
       }
     }
   },
-,
   {
     path: '/error',
     component: ErrorPage,
     beforeEnter: (to, from, next) => {
       if (!sessionStorage.getItem('navigation.error')) {
-        next('/no-such-page');
+        next('/');
       } else {
         sessionStorage.removeItem('navigation.error');
         next();
