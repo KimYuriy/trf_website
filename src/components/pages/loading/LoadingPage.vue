@@ -46,8 +46,6 @@ onBeforeMount(async () => {
 });
 </script>
 
-<style scoped>
-.fill-height {
-  height: 100vh;
-}
+<style scoped lang="scss">
+@import "@/components/styles/index";
 </style>

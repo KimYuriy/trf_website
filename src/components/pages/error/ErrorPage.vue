@@ -22,8 +22,6 @@ import RichText from '@/components/pages/home/ui/common/RichText.vue';
 const text = ref<string>('Ошибка загрузки страницы. Пожалуйста, попробуйте зайти позже');
 </script>
   
-<style scoped>
-.fill-height {
-  height: 100vh;
-}
+<style scoped lang="scss">
+@import "@/components/styles/index";
 </style>

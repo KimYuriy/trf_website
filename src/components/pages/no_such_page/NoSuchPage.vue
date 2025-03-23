@@ -13,9 +13,8 @@
         <router-link
           class="mt-5"
           to="/"
-        >
-          Вернуться на главную
-        </router-link>
+          v-text="'Вернуться на главную'"
+        />
       </v-col>
     </v-row>
   </v-container>
@@ -28,8 +27,6 @@ import RichText from '@/components/pages/home/ui/common/RichText.vue';
 const text = ref<string>('Страница, которую Вы пытаетесь открыть, не существует');
 </script>
 
-<style scoped>
-.fill-height {
-  height: 100vh;
-}
+<style scoped lang="scss">
+@import "@/components/styles/index";
 </style>
