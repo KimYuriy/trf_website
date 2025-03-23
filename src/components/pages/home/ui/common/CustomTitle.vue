@@ -12,8 +12,8 @@ import RichText from '@/components/pages/home/ui/common/RichText.vue';
 
 withDefaults(
   defineProps<{
-    text: string,
-    textStyle?: string
+    text: string;
+    textStyle?: string;
   }>(),
   {
     textStyle: 'text-h4'
@@ -21,8 +21,6 @@ withDefaults(
 );
 </script>
 
-<style scoped>
-.custom-font {
-  font-family: 'Bahnschrift';
-}
+<style scoped lang="scss">
+@import "@/components/styles/index";
 </style>

@@ -23,7 +23,7 @@ import SocialMediaCard from '@/components/pages/home/ui/socialmedia/ui/socialmed
 const { mdAndUp } = useDisplay();
 
 defineProps<{
-  socials: DataModel[]
+  socials: DataModel[];
 }>();
 </script>
 

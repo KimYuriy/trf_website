@@ -29,7 +29,7 @@ import AlbumCard from '@/components/pages/home/ui/gallery/ui/AlbumCard.vue';
 import CustomTitle from '@/components/pages/home/ui/common/CustomTitle.vue';
 
 const props = defineProps<{
-  albums: PhotoAlbumModel[]
+  albums: PhotoAlbumModel[];
 }>();
 
 const currentIndex = ref<number>(0);

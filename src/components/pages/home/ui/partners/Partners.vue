@@ -34,6 +34,6 @@ import PartnerCard from '@/components/pages/home/ui/partners/ui/partner-card/Par
 import CustomTitle from '@/components/pages/home/ui/common/CustomTitle.vue';
 
 defineProps<{
-  partners: DataModel[]
+  partners: DataModel[];
 }>();
 </script>

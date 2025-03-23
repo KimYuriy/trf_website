@@ -10,8 +10,8 @@
     >
       <v-col cols="12">
         <v-progress-circular
-          color="white"
           indeterminate
+          color="white"
           size="70"
           width="6"
         />

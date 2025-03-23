@@ -25,7 +25,7 @@ export interface IEvent {
   short_description: string;
   long_description: string;
   logo: ILogo;
-  img: string
+  img: string;
 }
 
 export interface IPhotoAlbum {
@@ -42,7 +42,7 @@ export interface IDataUrl {
   name: string;
   description: string;
   logo: ILogo;
-  url: string
+  url: string;
 }
 
 export class LogoModel {

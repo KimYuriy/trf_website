@@ -50,6 +50,7 @@
 <script setup lang="ts">
 import { computed, onBeforeMount, ref } from 'vue';
 import { useDisplay } from 'vuetify';
+import { HomeApi } from '@/components/pages/home/network/home_api';
 import { AllDataModel, type IAllData } from '@/components/pages/home/model/all_data';
 import testJson from '@/test_data/test_incoming_json.json';
 import AppBar from '@/components/pages/home/ui/app-bar/AppBar.vue';
@@ -59,7 +60,6 @@ import SocialMedia from '@/components/pages/home/ui/socialmedia/SocialMedia.vue'
 import Contacts from '@/components/pages/home/ui/contacts/Contacts.vue';
 import CustomFooter from '@/components/pages/home/ui/footer/Footer.vue';
 import AboutOrganizationNEvents from '@/components/pages/home/ui/about-org-n-events/AboutOrganizationNEvents.vue';
-import { HomeApi } from './network/home_api';
 
 const { smAndUp, xlAndUp } = useDisplay();
 

@@ -16,6 +16,6 @@ import CustomTitle from '@/components/pages/home/ui/common/CustomTitle.vue';
 import ContactCard from '@/components/pages/home/ui/contacts/ui/contact-card/ContactCard.vue';
 
 defineProps<{
-  contacts: DataModel[]
+  contacts: DataModel[];
 }>();
 </script>

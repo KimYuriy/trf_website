@@ -5,8 +5,8 @@
   >
     <div id="about">
       <custom-title
-        text-style="mt-5"
         :class="smAndUp? 'text-h2' : 'text-h4'"
+        text-style="mt-5"
         :text="info.name"
       />
       <v-row
@@ -21,18 +21,19 @@
           />
         </v-col>
       </v-row>
-    
       <v-card-text class="text-h6 text-justify">
         <rich-text :text="info.description" />
       </v-card-text>
     </div>
-
     <div
       v-if="events.length > 0"
       class="my-5"
       id="events"
     >
-      <custom-title class="mt-10" text="Наши мероприятия" />
+      <custom-title
+        class="mt-10"
+        text="Наши мероприятия"
+      />
       <v-row
         v-if="!smAndUp"
         class="pa-0 mt-4 mb-8 justify-space-between"

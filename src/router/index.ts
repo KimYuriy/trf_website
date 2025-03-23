@@ -1,9 +1,9 @@
+import { createRouter, createWebHistory } from 'vue-router';
 import ErrorPage from '@/components/pages/error/ErrorPage.vue';
 import HomePage from '@/components/pages/home/HomePage.vue';
 import InProgressPage from '@/components/pages/in-progress/InProgressPage.vue';
 import LoadingPage from '@/components/pages/loading/LoadingPage.vue';
 import NoSuchPage from '@/components/pages/no_such_page/NoSuchPage.vue';
-import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
   {
@@ -56,4 +56,5 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: routes,
 });
+
 export default router;

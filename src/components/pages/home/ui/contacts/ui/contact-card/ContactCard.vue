@@ -28,7 +28,7 @@ import type { DataModel } from '@/components/pages/home/model/all_data';
 import RichText from '@/components/pages/home/ui/common/RichText.vue';
 
 defineProps<{
-  contact: DataModel
+  contact: DataModel;
 }>();
 
 const { smAndUp } = useDisplay();

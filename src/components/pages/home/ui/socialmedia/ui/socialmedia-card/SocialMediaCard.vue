@@ -15,7 +15,7 @@
     <div :class="smAndUp? 'ml-5' : 'mt-5'">
       <p
         class="text-h5"
-        :class="!smAndUp ? 'text-center' : ''"
+        :class="{ 'text-center': !smAndUp }"
       >
         <rich-text :text="media.name" />
       </p>
@@ -32,7 +32,7 @@ import type { DataModel } from '@/components/pages/home/model/all_data';
 import RichText from '@/components/pages/home/ui/common/RichText.vue';
 
 defineProps<{
-  media: DataModel
+  media: DataModel;
 }>();
 
 const { smAndUp } = useDisplay();

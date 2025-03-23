@@ -29,7 +29,6 @@
         {{ title }}
       </v-app-bar-title>
     </v-app-bar>
-
     <v-navigation-drawer
       v-model="drawer"
       temporary
@@ -57,7 +56,7 @@ import { NavLinks } from '@/components/pages/home/model/nav_links';
 
 withDefaults(
   defineProps<{
-    title?: string
+    title?: string;
   }>(),
   {
     title: 'Тактикул.РФ'
@@ -67,7 +66,7 @@ withDefaults(
 const { smAndUp } = useDisplay();
 
 const emit = defineEmits<{
-  navClicked: [id: string]
+  navClicked: [id: string];
 }>();
 
 const drawer = ref<boolean>(false);
@@ -78,8 +77,6 @@ const scrollToBlock = (id: string) => {
 }
 </script>
 
-<style scoped>
-.custom-font {
-  font-family: 'Bahnschrift';
-}
+<style scoped lang="scss">
+@import "@/components/styles/index";
 </style>

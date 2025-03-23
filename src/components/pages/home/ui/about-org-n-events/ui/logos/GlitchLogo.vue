@@ -32,7 +32,7 @@ import RichText from '@/components/pages/home/ui/common/RichText.vue';
 
 defineProps<{
   tooltipLocation: 'top' | 'bottom' | 'start' | 'end';
-  event: EventModel | undefined
+  event: EventModel | undefined;
 }>();
 
 const emit = defineEmits<{

@@ -29,7 +29,7 @@ import { NavLinks } from '@/components/pages/home/model/nav_links';
 
 withDefaults(
   defineProps<{
-    title?: string
+    title?: string;
   }>(),
   {
     title: 'Тактикул.РФ'
@@ -39,6 +39,6 @@ withDefaults(
 const { smAndUp } = useDisplay();
 
 const emit = defineEmits<{
-  navClicked: [id: string]
+  navClicked: [id: string];
 }>();
 </script>

@@ -1,7 +1,7 @@
 <template>
   <v-card
     class="card d-flex flex-column align-center justify-space-between"
-    :class="index % 2 === 0 ? '' : 'flex-column-reverse'"
+    :class="{ 'flex-column-reverse': index % 2 === 1 }"
     variant="text"
     :max-width="cardWidth"
   >
@@ -28,6 +28,7 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
 import type { DataModel } from '@/components/pages/home/model/all_data';
 import RichText from '@/components/pages/home/ui/common/RichText.vue';
 
@@ -36,7 +37,7 @@ defineProps<{
   index: number;
 }>();
 
-const cardWidth = 200;
+const cardWidth = ref<number>(200);
 </script>
 
 <style scoped>
