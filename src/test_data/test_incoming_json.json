@@ -8,50 +8,62 @@
         {
             "id": 1,
             "name": "Мероприятие ZH",
-            "short_description": "<p>Lorem ipsum dolor sit amet, <strong>consectetur </strong><em>adipiscing </em><a href=\"elit\" rel=\"noopener noreferrer\" target=\"_blank\">elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><p>Ut enim ad midfdfgnim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Lorem ipsum dolor sit amet, <strong>consectetur </strong><em>adipiscing </em><a href=\"elit\" rel=\"noopener noreferrer\" target=\"_blank\">elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><p>Ut enim ad midfdfgnim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
-            "long_description":  "<p>Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;<strong>amet</strong>,&nbsp;<em>consectetur&nbsp;</em><u>adipiscing&nbsp;</u>elit,&nbsp;sed&nbsp;do&nbsp;<a href=\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\" rel=\"noopener noreferrer\" target=\"_blank\">eiusmod</a>&nbsp;<strong><em><u>tempor&nbsp;</u></em></strong>incididunt&nbsp;ut&nbsp;labore&nbsp;et&nbsp;dolore&nbsp;magna&nbsp;aliqua.&nbsp;Ut&nbsp;enim&nbsp;ad&nbsp;minim&nbsp;veniam,&nbsp;quis&nbsp;nostrud&nbsp;exercitation&nbsp;ullamco&nbsp;laboris&nbsp;nisi&nbsp;ut&nbsp;aliquip&nbsp;ex&nbsp;ea&nbsp;commodo&nbsp;consequat.</p>",
+            "shortDescription": "<p>Lorem ipsum dolor sit amet, <strong>consectetur </strong><em>adipiscing </em><a href=\"elit\" rel=\"noopener noreferrer\" target=\"_blank\">elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><p>Ut enim ad midfdfgnim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Lorem ipsum dolor sit amet, <strong>consectetur </strong><em>adipiscing </em><a href=\"elit\" rel=\"noopener noreferrer\" target=\"_blank\">elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><p>Ut enim ad midfdfgnim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
+            "longDescription":  "<p>Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;<strong>amet</strong>,&nbsp;<em>consectetur&nbsp;</em><u>adipiscing&nbsp;</u>elit,&nbsp;sed&nbsp;do&nbsp;<a href=\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\" rel=\"noopener noreferrer\" target=\"_blank\">eiusmod</a>&nbsp;<strong><em><u>tempor&nbsp;</u></em></strong>incididunt&nbsp;ut&nbsp;labore&nbsp;et&nbsp;dolore&nbsp;magna&nbsp;aliqua.&nbsp;Ut&nbsp;enim&nbsp;ad&nbsp;minim&nbsp;veniam,&nbsp;quis&nbsp;nostrud&nbsp;exercitation&nbsp;ullamco&nbsp;laboris&nbsp;nisi&nbsp;ut&nbsp;aliquip&nbsp;ex&nbsp;ea&nbsp;commodo&nbsp;consequat.</p>",
             "logo": {
                 "id": -1,
                 "url": "src/assets/images/homa.jpg",
                 "position": "center"
             },
-            "img": "src/assets/images/bg.png"
+            "img": {
+                "id": -1,
+                "url": "src/assets/images/bg.png"
+            }
         },
         {
             "id": 2,
             "name": "Мероприятие EDC",
-            "short_description": "Краткое описание EDC",
-            "long_description":  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula, ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula, ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula, ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus",
+            "shortDescription": "Краткое описание EDC",
+            "longDescription":  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula, ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula, ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula, ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus",
             "logo": {
                 "id": -1,
                 "url": "src/assets/images/homa.jpg",
                 "position": "left"
             },
-            "img": "src/assets/images/bg.png"
+            "img": {
+                "id": -1,
+                "url": "src/assets/images/bg.png"
+            }
         },
         {
             "id": 3,
             "name": "Мероприятие DV",
-            "short_description": "Краткое описание DV",
-            "long_description":  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula, ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula, ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula, ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus",
+            "shortDescription": "Краткое описание DV",
+            "longDescription":  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula, ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula, ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula, ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus",
             "logo": {
                 "id": -1,
                 "url": "src/assets/images/homa.jpg",
                 "position": "top"
             },
-            "img": "src/assets/images/bg.png"
+            "img": {
+                "id": -1,
+                "url": "src/assets/images/bg.png"
+            }
         },
         {
             "id": 4,
             "name": "Мероприятие RUS",
-            "short_description": "Краткое описание RUS",
-            "long_description":  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula, ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula, ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula, ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus",
+            "shortDescription": "Краткое описание RUS",
+            "longDescription":  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula, ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula, ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dictum justo. Phasellus nisi tortor, malesuada vel nibh vitae, rutrum pharetra neque. Morbi at tellus euismod, vehicula, ipsum vitae, egestas justo. Donec accumsan id metus vel faucibus",
             "logo": {
                 "id": -1,
                 "url": "src/assets/images/homa.jpg",
                 "position": "right"
             },
-            "img": "src/assets/images/bg.png"
+            "img": {
+                "id": -1,
+                "url": "src/assets/images/bg.png"
+            }
         }
     ],
     "gallery":  [
@@ -64,7 +76,10 @@
                 "url": "src/assets/images/homa.jpg"
             },
             "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-            "backgroundImg": "src/assets/images/0.jpg"
+            "background": {
+                "id": -1,
+                "url": "src/assets/images/0.jpg"
+            }
         },
         {
             "id": 0,
@@ -75,7 +90,10 @@
                 "url": "src/assets/images/homa.jpg"
             },
             "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-            "backgroundImg": "src/assets/images/1.jpg"
+            "background": {
+                "id": -1,
+                "url": "src/assets/images/1.jpg"
+            }
         },
         {
             "id": 0,
@@ -86,7 +104,10 @@
                 "url": "src/assets/images/homa.jpg"
             },
             "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-            "backgroundImg": "src/assets/images/2.jpg"
+            "background": {
+                "id": -1,
+                "url": "src/assets/images/2.jpg"
+            }
         },
         {
             "id": 0,
@@ -97,7 +118,10 @@
                 "url": "src/assets/images/homa.jpg"
             },
             "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-            "backgroundImg": "src/assets/images/3.jpg"
+            "background": {
+                "id": -1,
+                "url": "src/assets/images/3.jpg"
+            }
         },
         {
             "id": 0,
@@ -108,7 +132,10 @@
                 "url": "src/assets/images/homa.jpg"
             },
             "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-            "backgroundImg": "src/assets/images/4.jpg"
+            "background": {
+                "id": -1,
+                "url": "src/assets/images/4.jpg"
+            }
         }
     ],
     "partners": [

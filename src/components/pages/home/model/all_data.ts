@@ -22,10 +22,10 @@ export interface IAbout {
 export interface IEvent {
   id: number;
   name: string;
-  short_description: string;
-  long_description: string;
+  shortDescription: string;
+  longDescription: string;
   logo: ILogo;
-  img: string;
+  img: ILogo;
 }
 
 export interface IPhotoAlbum {
@@ -33,8 +33,8 @@ export interface IPhotoAlbum {
   name: string;
   description: string;
   logo: ILogo;
+  background: ILogo;
   url: string;
-  backgroundImg: string;
 }
 
 export interface IDataUrl {
@@ -77,10 +77,10 @@ export class EventModel {
   constructor(json: IEvent) {
     this.id = json.id;
     this.name = json.name;
-    this.shortDescription = json.short_description;
-    this.longDescription = json.long_description;
+    this.shortDescription = json.shortDescription;
+    this.longDescription = json.longDescription;
     this.logo = new LogoModel(json.logo);
-    this.img = json.img;
+    this.img = new LogoModel(json.img);
   }
 
   id: number;
@@ -88,7 +88,7 @@ export class EventModel {
   shortDescription: string;
   longDescription: string;
   logo: LogoModel;
-  img: string;
+  img: LogoModel;
 }
 
 export class AboutModel {
@@ -110,7 +110,7 @@ export class PhotoAlbumModel {
     this.description = json.description;
     this.logo = new LogoModel(json.logo);
     this.url = json.url;
-    this.backgroundImg = json.backgroundImg;
+    this.background = new LogoModel(json.background);
   }
 
   id: number;
@@ -118,7 +118,7 @@ export class PhotoAlbumModel {
   description: string;
   logo: LogoModel;
   url: string;
-  backgroundImg: string;
+  background: ILogo;
 }
 
 export class AllDataModel {

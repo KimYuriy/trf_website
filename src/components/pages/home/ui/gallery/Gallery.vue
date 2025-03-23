@@ -34,12 +34,12 @@ const props = defineProps<{
 
 const currentIndex = ref<number>(0);
 
-const backgroundImageUrl = ref<string>(props.albums[currentIndex.value].backgroundImg);
+const backgroundImageUrl = ref<string>(props.albums[currentIndex.value].background.url);
 
 watch(
   currentIndex,
   () => {
-    backgroundImageUrl.value = props.albums[currentIndex.value].backgroundImg;
+    backgroundImageUrl.value = props.albums[currentIndex.value].background.url;
   }
 );
 </script>

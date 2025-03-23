@@ -9,7 +9,7 @@
       aspect-ratio="16/9"
       :alt="event.name"
       :width="smAndUp ? 300 : 500"
-      :src="event.img"
+      :src="event.img.url"
     />
     <div class="w-100">
       <p
