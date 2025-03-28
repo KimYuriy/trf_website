@@ -2,20 +2,29 @@ import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import vueDevTools from 'vite-plugin-vue-devtools'
 
-// https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin
-import vuetify from 'vite-plugin-vuetify'
+import ipAddress from './src/components/network/server_ip_address';
 
 // https://vite.dev/config/
-export default defineConfig({
+export default ({ mode }) => defineConfig({
   plugins: [
-    vue(),
-    vueDevTools(),
+    vue()
   ],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
-})
+  server: mode === 'development'
+    ? {
+      proxy: {
+        '/api': {
+          target: ipAddress,
+          changeOrigin: true,
+          secure: false,
+          rewrite: (path) => path.replace(/^\/api/, ''),
+        },
+      },
+    }
+    : {},
+});

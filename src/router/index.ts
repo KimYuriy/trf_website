@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import ErrorPage from '@/components/pages/error/ErrorPage.vue';
 import HomePage from '@/components/pages/home/HomePage.vue';
-import InProgressPage from '@/components/pages/in-progress/InProgressPage.vue';
 import LoadingPage from '@/components/pages/loading/LoadingPage.vue';
 import NoSuchPage from '@/components/pages/no_such_page/NoSuchPage.vue';
 
@@ -18,18 +17,6 @@ const routes = [
         next('/');
       } else {
         sessionStorage.removeItem('navigation.home');
-        next();
-      }
-    }
-  },
-  {
-    path: '/in-progress',
-    component: InProgressPage,
-    beforeEnter: (to, from, next) => {
-      if (!sessionStorage.getItem('navigation.in-progress')) {
-        next('/');
-      } else {
-        sessionStorage.removeItem('navigation.in-progress');
         next();
       }
     }

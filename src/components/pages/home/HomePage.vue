@@ -1,7 +1,7 @@
 <template>
   <div>
     <app-bar
-      :title="data!.about.name"
+      :title="data.about.name"
       @nav-clicked="scrollToSection"
     />
     <v-container
@@ -14,34 +14,34 @@
       >
         <v-col cols="12">
           <about-organization-n-events
-            :info="data!.about"
-            :events="data!.events"
+            :info="data.about"
+            :events="data.events"
           />
           <partners
-            v-if="data!.partners.length > 0"
+            v-if="data.partners.length > 0"
             id="partners"
-            :partners="data!.partners"
+            :partners="data.partners"
           />
           <gallery
-            v-if="data!.gallery.length > 0"
+            v-if="data.gallery.length > 0"
             id="gallery"
-            :albums="data!.gallery"
+            :albums="data.gallery"
           />
           <contacts
-            v-if="data!.contacts.length > 0"
+            v-if="data.contacts.length > 0"
             id="contacts"
-            :contacts="data!.contacts"
+            :contacts="data.contacts"
           />
           <social-media
-            v-if="data!.socialmedias.length > 0"
+            v-if="data.socialmedias.length > 0"
             id="social"
-            :socials="data!.socialmedias"
+            :socials="data.socialmedias"
           />
         </v-col>
       </v-row>
     </v-container>
     <custom-footer
-      :title="data!.about.name"
+      :title="data.about.name"
       @nav-clicked="scrollToSection"
     />
   </div>
@@ -52,7 +52,7 @@ import { computed, onBeforeMount, ref } from 'vue';
 import { useDisplay } from 'vuetify';
 import { HomeApi } from '@/components/pages/home/network/home_api';
 import { AllDataModel, type IAllData } from '@/components/pages/home/model/all_data';
-import testJson from '@/test_data/test_incoming_json.json';
+import defaultJson from '@/components/pages/home/default/default_data.json';
 import AppBar from '@/components/pages/home/ui/app-bar/AppBar.vue';
 import Gallery from '@/components/pages/home/ui/gallery/Gallery.vue';
 import Partners from '@/components/pages/home/ui/partners/Partners.vue';
@@ -63,7 +63,7 @@ import AboutOrganizationNEvents from '@/components/pages/home/ui/about-org-n-eve
 
 const { smAndUp, xlAndUp } = useDisplay();
 
-const data = ref<AllDataModel | null>(null);
+const data = ref<AllDataModel>(new AllDataModel(defaultJson as IAllData));
 
 const homeApi = new HomeApi('/summary');
 
@@ -82,18 +82,8 @@ const scrollToSection = (sectionId: string) => {
 onBeforeMount(async () => {
   homeApi.getContent()
     .then((response) => {
-      console.log(response);
-      data.value = new AllDataModel(response);
+      data.value = new AllDataModel(response); 
     })
-    .catch(() => {
-      //TODO: раскомментировать
-      // sessionStorage.setItem('navigation.error', 'true');
-      // router.replace('/error');
-      
-      //TODO: удалить
-      data.value = new AllDataModel(testJson as IAllData);
-    });
-
   });
 
 const contentWidth = computed(() => {

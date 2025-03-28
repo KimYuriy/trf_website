@@ -29,3 +29,5 @@ coverage
 *.tsbuildinfo
 
 /src/components/network/server_ip_address.ts
+/src/assets/default/
+/src/components/pages/home/default/default_data.json

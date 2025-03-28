@@ -10,10 +10,15 @@
     >
       <v-col cols="12">
         <v-progress-circular
+          v-if="wipText === undefined"
           indeterminate
           color="white"
           size="70"
           width="6"
+        />
+        <rich-text
+          v-else
+          :text="wipText"
         />
       </v-col>
     </v-row>
@@ -21,28 +26,33 @@
 </template>
 
 <script setup lang="ts">
-import { onBeforeMount } from 'vue';
+import { onBeforeMount, ref } from 'vue';
 import router from '@/router';
 import { LoadingApi } from '@/components/pages/loading/network/loading_api';
+import RichText from '@/components/pages/home/ui/common/RichText.vue';
 
-//TODO: заменить эндпоинт на реальный
-const loadingApi = new LoadingApi('/endpoint');
+const loadingApi = new LoadingApi('/in-progress');
+
+const wipText = ref<string | undefined>(undefined);
 
 onBeforeMount(async () => {
-  //TODO: раскомментировать
-  // loadingApi.getStatus()
-  //   .then((isWIP) => {
-  //     sessionStorage.setItem(`navigation.${isWIP ? 'in-progress' : 'home'}`, 'true');
-  //     router.replace(isWIP ? '/in-progress' : '/home');
-  //   })
-  //   .catch(() => {
-  //     sessionStorage.setItem('navigation.error', 'true');
-  //     router.replace('/error');
-  //   });
-
-  //TODO: удалить
-  sessionStorage.setItem('navigation.home', 'true');
-  router.replace('/home');
+  loadingApi.getStatus()
+    .then((data) => {
+      if (data.isAvailable) {
+        sessionStorage.setItem('navigation.home', 'true');
+        router.replace('/home');
+      } else {
+        try {
+          wipText.value = data.description
+        } catch {
+          wipText.value = 'В разработке'
+        }
+      }
+    })
+    .catch((error) => {
+      sessionStorage.setItem('navigation.error', 'true');
+      router.replace('/error');
+    });
 });
 </script>
 
