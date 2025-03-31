@@ -84,9 +84,12 @@ onBeforeMount(async () => {
     .then((response) => {
       data.value = new AllDataModel(response); 
     })
+    .catch(() => {
+      data.value = new AllDataModel(defaultJson as IAllData);
+    })
   });
 
-const contentWidth = computed(() => {
+const contentWidth = computed<string>(() => {
   if (xlAndUp.value) {
     return 'w-33';
   }

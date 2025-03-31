@@ -1,3 +1,5 @@
+import defaultJson from '@/components/pages/home/default/default_data.json';
+
 export interface IAllData {
   about: IAbout;
   events: IEvent[];
@@ -129,6 +131,30 @@ export class AllDataModel {
     this.partners = json.partners.map(partner => new DataModel(partner));
     this.socialmedias = json.socialmedias.map(social => new DataModel(social));
     this.contacts = json.contacts.map(contact => new DataModel(contact));
+
+    // const jsonByDefault = defaultJson as IAllData;
+
+    // this.about = new AboutModel(json.about ?? jsonByDefault.about);
+
+    // this.events = json.events.length > 0
+    //   ? json.events.map(event => new EventModel(event))
+    //   : jsonByDefault.events.map(event => new EventModel(event));
+
+    // this.gallery = json.gallery.length > 0
+    //   ? json.gallery.map(album => new PhotoAlbumModel(album))
+    //   : jsonByDefault.gallery.map(album => new PhotoAlbumModel(album));
+
+    // this.partners = json.partners.length > 0
+    //   ? json.partners.map(partner => new DataModel(partner))
+    //   : jsonByDefault.partners.map(partner => new DataModel(partner));
+
+    // this.socialmedias = json.socialmedias.length > 0
+    //   ? json.socialmedias.map(social => new DataModel(social))
+    //   : jsonByDefault.socialmedias.map(social => new DataModel(social));
+
+    // this.contacts = json.contacts.length > 0
+    //   ? json.contacts.map(contact => new DataModel(contact))
+    //   : jsonByDefault.contacts.map(contact => new DataModel(contact));
   }
 
   about: AboutModel;

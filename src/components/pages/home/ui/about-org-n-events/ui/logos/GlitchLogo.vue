@@ -1,8 +1,6 @@
 <!-- Код для глитч-эффекта взят отсюда: https://habr.com/ru/articles/533252/ -->
 <template>
-  <v-tooltip
-    :location="tooltipLocation"
-  >
+  <v-tooltip :location="tooltipLocation">
     <template #activator="{ props }">
       <div
         v-bind="props"
