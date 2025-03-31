@@ -26,13 +26,14 @@
 <script setup lang="ts">
 import { useDisplay } from 'vuetify';
 import { NavLinks } from '@/components/pages/home/model/nav_links';
+import defaultTitle from '@/assets/default/meta/title';
 
 withDefaults(
   defineProps<{
     title?: string;
   }>(),
   {
-    title: 'Тактикул.РФ'
+    title: defaultTitle
   }
 );
 
