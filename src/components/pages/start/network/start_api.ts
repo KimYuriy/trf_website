@@ -1,5 +1,5 @@
 import { BaseApi } from "@/components/network/base_api";
-import type { ILoading } from "@/components/pages/loading/model/loading_data";
+import type { ILoading } from "@/components/pages/loading/model/start_data";
 
 export class LoadingApi extends BaseApi {
   getStatus = async (): Promise<ILoading> => (

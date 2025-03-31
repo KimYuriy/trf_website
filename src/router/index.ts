@@ -1,12 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomePage from '@/components/pages/home/HomePage.vue';
-import LoadingPage from '@/components/pages/loading/LoadingPage.vue';
+import StartPage from '@/components/pages/start/StartPage.vue';
 import NoSuchPage from '@/components/pages/no_such_page/NoSuchPage.vue';
 
 const routes = [
   {
     path: '/',
-    component: LoadingPage,
+    component: StartPage,
   },
   {
     path: '/home',

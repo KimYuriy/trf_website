@@ -29,7 +29,7 @@
 <script setup lang="ts">
 import { onBeforeMount, ref } from 'vue';
 import router from '@/router';
-import { LoadingApi } from '@/components/pages/loading/network/loading_api';
+import { LoadingApi } from '@/components/pages/start/network/start_api';
 import RichText from '@/components/pages/home/ui/common/RichText.vue';
 
 const loadingApi = new LoadingApi('/in-progress');
