@@ -9,7 +9,7 @@
       justify="center"
     >
       <v-col cols="12">
-        <rich-text :text="text" />
+        <rich-text text="Страница, которую Вы пытаетесь открыть, не существует" />
         <router-link
           class="mt-5"
           to="/"
@@ -21,10 +21,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
 import RichText from '@/components/pages/home/ui/common/RichText.vue';
-
-const text = ref<string>('Страница, которую Вы пытаетесь открыть, не существует');
 </script>
 
 <style scoped lang="scss">

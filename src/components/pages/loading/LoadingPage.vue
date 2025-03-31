@@ -4,7 +4,7 @@
     fluid
   >
     <v-row
-      class="text-center text-h2 text-uppercase"
+      class="text-center"
       align="center"
       justify="center"
     >
@@ -18,6 +18,7 @@
         />
         <rich-text
           v-else
+          class="text-h2"
           :text="wipText"
         />
       </v-col>
@@ -49,9 +50,8 @@ onBeforeMount(async () => {
         }
       }
     })
-    .catch((error) => {
-      sessionStorage.setItem('navigation.error', 'true');
-      router.replace('/error');
+    .catch(() => {
+      wipText.value = 'Ошибка загрузки данных. Пожалуйста, попробуйте позднее';
     });
 });
 </script>
