@@ -52,7 +52,6 @@ import { computed, onBeforeMount, ref } from 'vue';
 import { useDisplay } from 'vuetify';
 import { HomeApi } from '@/components/pages/home/network/home_api';
 import { AllDataModel, type IAllData } from '@/components/pages/home/model/all_data';
-import defaultJson from '@/components/pages/home/default/default_data.json';
 import AppBar from '@/components/pages/home/ui/app-bar/AppBar.vue';
 import Gallery from '@/components/pages/home/ui/gallery/Gallery.vue';
 import Partners from '@/components/pages/home/ui/partners/Partners.vue';
@@ -63,7 +62,7 @@ import AboutOrganizationNEvents from '@/components/pages/home/ui/about-org-n-eve
 
 const { smAndUp, xlAndUp } = useDisplay();
 
-const data = ref<AllDataModel>(new AllDataModel(defaultJson as IAllData));
+const data = ref<AllDataModel>(AllDataModel.default());
 
 const homeApi = new HomeApi('/summary');
 
@@ -85,9 +84,9 @@ onBeforeMount(async () => {
       data.value = new AllDataModel(response); 
     })
     .catch(() => {
-      data.value = new AllDataModel(defaultJson as IAllData);
+      data.value = AllDataModel.default();
     })
-  });
+});
 
 const contentWidth = computed<string>(() => {
   if (xlAndUp.value) {

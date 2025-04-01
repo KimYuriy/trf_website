@@ -1,8 +1,6 @@
 import { fileURLToPath, URL } from 'node:url'
-
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-
 import ipAddress from './src/components/network/server_ip_address';
 
 // https://vite.dev/config/
