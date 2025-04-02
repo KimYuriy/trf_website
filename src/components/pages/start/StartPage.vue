@@ -10,7 +10,7 @@
     >
       <v-col cols="12">
         <v-progress-circular
-          v-if="wipText === undefined"
+          v-if="systemText === undefined"
           indeterminate
           color="white"
           size="70"
@@ -19,7 +19,7 @@
         <rich-text
           v-else
           class="text-h2"
-          :text="wipText"
+          :text="systemText"
         />
       </v-col>
     </v-row>
@@ -34,7 +34,7 @@ import RichText from '@/components/pages/home/ui/common/RichText.vue';
 
 const loadingApi = new LoadingApi('/in-progress');
 
-const wipText = ref<string | undefined>(undefined);
+const systemText = ref<string | undefined>(undefined);
 
 onBeforeMount(async () => {
   loadingApi.getStatus()
@@ -44,14 +44,14 @@ onBeforeMount(async () => {
         router.replace('/home');
       } else {
         try {
-          wipText.value = data.description
+          systemText.value = data.description
         } catch {
-          wipText.value = 'В разработке'
+          systemText.value = 'В разработке'
         }
       }
     })
     .catch(() => {
-      wipText.value = 'Ошибка загрузки данных. Пожалуйста, попробуйте позднее';
+      systemText.value = 'Ошибка загрузки данных. Пожалуйста, попробуйте позднее';
     });
 });
 </script>

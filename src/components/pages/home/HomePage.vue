@@ -51,7 +51,7 @@
 import { computed, onBeforeMount, ref } from 'vue';
 import { useDisplay } from 'vuetify';
 import { HomeApi } from '@/components/pages/home/network/home_api';
-import { AllDataModel, type IAllData } from '@/components/pages/home/model/all_data';
+import { AllDataModel } from '@/components/pages/home/model/all_data';
 import AppBar from '@/components/pages/home/ui/app-bar/AppBar.vue';
 import Gallery from '@/components/pages/home/ui/gallery/Gallery.vue';
 import Partners from '@/components/pages/home/ui/partners/Partners.vue';

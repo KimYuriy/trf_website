@@ -8,7 +8,7 @@
         <glitch-logo
           tooltip-location="end"
           :event="events.find(event => event.logo.position === 'top')"
-          @event-clicked="eventClicked"
+          @event-clicked="(id: number) => emit('eventClicked', id)"
         />
       </v-col>
       <v-row
@@ -20,7 +20,7 @@
           <glitch-logo
             tooltip-location="top"
             :event="events.find(event => event.logo.position === 'left')"
-            @event-clicked="eventClicked"
+            @event-clicked="(id: number) => emit('eventClicked', id)"
           />
         </v-col>
         <v-col
@@ -30,14 +30,14 @@
           <glitch-logo
             tooltip-location="bottom"
             :event="events.find(event => event.logo.position === 'center')"
-            @event-clicked="eventClicked"
+            @event-clicked="(id: number) => emit('eventClicked', id)"
           />
         </v-col>
         <v-col cols="3">
           <glitch-logo
             tooltip-location="top"
             :event="events.find(event => event.logo.position === 'right')"
-            @event-clicked="eventClicked"
+            @event-clicked="(id: number) => emit('eventClicked', id)"
           />
         </v-col>
       </v-row>
@@ -56,6 +56,4 @@ defineProps<{
 const emit = defineEmits<{
   eventClicked: [id: number];
 }>();
-
-const eventClicked = (id: number) => emit('eventClicked', id);
 </script>

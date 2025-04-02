@@ -7,7 +7,6 @@
     <div :class="mdAndUp? `${socials.length > 5 ? 'grid-container' : ''}` : ''">
       <social-media-card
         v-for="media in socials"
-        :key="media.id"
         :media="media"
       />
     </div>

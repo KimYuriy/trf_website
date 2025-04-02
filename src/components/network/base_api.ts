@@ -4,7 +4,7 @@ import axiosApiInstance from "@/components/network/axios_api_instance";
 export class BaseApi {
   constructor(path: string, axiosInstance = axiosApiInstance) {
     this.path = path;
-    this.axiosInstance = axiosInstance
+    this.axiosInstance = axiosInstance;
   }
 
   path: string;

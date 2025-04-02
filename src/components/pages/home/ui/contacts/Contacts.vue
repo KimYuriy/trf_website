@@ -4,9 +4,9 @@
     fluid
   >
     <custom-title text="Контакты" />
-      <v-col v-for="contact in contacts">
-        <contact-card :contact="contact" />
-      </v-col>
+    <v-col v-for="contact in contacts">
+      <contact-card :contact="contact" />
+    </v-col>
   </v-container>
 </template>
 

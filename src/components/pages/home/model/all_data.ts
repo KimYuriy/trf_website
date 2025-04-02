@@ -9,7 +9,7 @@ export interface IAllData {
   contacts: IDataUrl[];
 }
 
-export interface ILogo {
+export interface IImage {
   id: number;
   url: string;
   position: 'top' | 'center' | 'left' | 'right' | undefined;
@@ -26,16 +26,16 @@ export interface IEvent {
   name: string;
   shortDescription: string;
   longDescription: string;
-  logo: ILogo;
-  img: ILogo;
+  logo: IImage;
+  img: IImage;
 }
 
 export interface IPhotoAlbum {
   id: number;
   name: string;
   description: string;
-  logo: ILogo;
-  background: ILogo;
+  logo: IImage;
+  background: IImage;
   url: string;
 }
 
@@ -43,12 +43,12 @@ export interface IDataUrl {
   id: number;
   name: string;
   description: string;
-  logo: ILogo;
+  logo: IImage;
   url: string;
 }
 
-export class LogoModel {
-  constructor(json: ILogo) {
+export class ImageModel {
+  constructor(json: IImage) {
     this.id = json.id;
     this.url = json.url;
     this.position = json.position ?? undefined;
@@ -64,14 +64,14 @@ export class DataModel {
     this.id = json.id;
     this.name = json.name;
     this.description = json.description;
-    this.logo = new LogoModel(json.logo);
+    this.logo = new ImageModel(json.logo);
     this.url = json.url;
   }
 
   id: number;
   name: string;
   description: string;
-  logo: LogoModel;
+  logo: ImageModel;
   url: string;
 }
 
@@ -81,16 +81,16 @@ export class EventModel {
     this.name = json.name;
     this.shortDescription = json.shortDescription;
     this.longDescription = json.longDescription;
-    this.logo = new LogoModel(json.logo);
-    this.img = new LogoModel(json.img);
+    this.logo = new ImageModel(json.logo);
+    this.img = new ImageModel(json.img);
   }
 
   id: number;
   name: string;
   shortDescription: string;
   longDescription: string;
-  logo: LogoModel;
-  img: LogoModel;
+  logo: ImageModel;
+  img: ImageModel;
 }
 
 export class AboutModel {
@@ -110,17 +110,17 @@ export class PhotoAlbumModel {
     this.id = json.id;
     this.name = json.name;
     this.description = json.description;
-    this.logo = new LogoModel(json.logo);
+    this.logo = new ImageModel(json.logo);
     this.url = json.url;
-    this.background = new LogoModel(json.background);
+    this.background = new ImageModel(json.background);
   }
 
   id: number;
   name: string;
   description: string;
-  logo: LogoModel;
+  logo: ImageModel;
   url: string;
-  background: ILogo;
+  background: IImage;
 }
 
 export class AllDataModel {

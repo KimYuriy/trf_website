@@ -17,7 +17,8 @@
         class="text-center text-black text-uppercase my-4"
         cols="12"
       >
-        {{ title }} • 2024 - {{ new Date().getFullYear() }}
+        <rich-text :text="title"/>
+        <span>{{ `2024 - ${new Date().getFullYear()}` }}</span>
       </v-col>
     </v-row>
   </v-footer>
@@ -27,6 +28,7 @@
 import { useDisplay } from 'vuetify';
 import { NavLinks } from '@/components/pages/home/model/nav_links';
 import defaultTitle from '@/assets/default/meta/title';
+import RichText from "@/components/pages/home/ui/common/RichText.vue"
 
 withDefaults(
   defineProps<{
