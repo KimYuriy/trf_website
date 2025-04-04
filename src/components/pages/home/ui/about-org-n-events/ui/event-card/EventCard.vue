@@ -1,17 +1,20 @@
 <template>
   <v-card
     class="d-flex my-5 w-100"
-    :class="smAndUp ? `${index % 2 === 0 ? '' : 'flex-row-reverse'}` : 'flex-column align-center'"
+    :class="smAndUp ? `${index % 2 === 0 ? 'flex-row-reverse' : ''}` : 'flex-column align-center'"
     variant="text"
   >
     <v-img
-      :class="smAndUp && index % 2 === 0 ? 'mr-5' : 'ml-5'"
+      :class="smAndUp && index % 2 === 0 ? 'ml-5' : 'mr-5'"
       aspect-ratio="16/9"
       :alt="event.name"
       :width="smAndUp ? 300 : 500"
       :src="event.img.url"
     />
-    <div class="w-100">
+    <div
+      class="w-100 d-flex flex-column"
+      :class="smAndUp ? `${index % 2 === 0 ? 'align-start' : 'align-end'}` : ''"
+    >
       <p
         class="text-h4"
         :class="{ 'text-center mt-2': !smAndUp }"

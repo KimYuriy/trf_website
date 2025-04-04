@@ -4,11 +4,16 @@
     :class="{ 'flex-column align-center': !smAndUp }"
     variant="text"
   >
-    <v-avatar
-      :size="192"
-      :image="contact.logo.url"
-    />
-    <div :class="{ 'ml-5': smAndUp }">
+    <a
+      target="_blank"
+      :href="contact.url"
+    >
+      <v-avatar
+        :size="128"
+        :image="contact.logo.url"
+      />
+    </a>
+    <div :class="{ 'ml-12': smAndUp }">
       <p
         class="text-h4"
         :class="{ 'text-center mt-2': !smAndUp }"

@@ -44,15 +44,13 @@ onBeforeMount(async () => {
         router.replace('/home');
       } else {
         try {
-          systemText.value = data.description
+          systemText.value = data.description;
         } catch {
-          systemText.value = 'В разработке'
+          systemText.value = 'В разработке';
         }
       }
     })
-    .catch(() => {
-      systemText.value = 'Ошибка загрузки данных. Пожалуйста, попробуйте позднее';
-    });
+    .catch(() => systemText.value = 'Ошибка загрузки данных. Пожалуйста, попробуйте позднее');
 });
 </script>
 

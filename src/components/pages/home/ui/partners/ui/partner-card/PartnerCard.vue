@@ -1,7 +1,6 @@
 <template>
   <v-card
-    class="card d-flex flex-column align-center justify-space-between"
-    :class="{ 'flex-column-reverse': index % 2 === 1 }"
+    class="card d-flex flex-column align-center"
     variant="text"
     :max-width="cardWidth"
   >
@@ -16,7 +15,7 @@
         :width="cardWidth"
       />
     </a>
-    <div :class="index % 2 === 0 ? 'mt-3' : 'mb-3'">
+    <div class="mt-3">
       <p class="text-h5 text-center">
         <rich-text :text="partner.name" />
       </p>
