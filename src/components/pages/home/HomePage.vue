@@ -40,10 +40,7 @@
         </v-col>
       </v-row>
     </v-container>
-    <custom-footer
-      :title="data.about.name"
-      @nav-clicked="scrollToSection"
-    />
+    <custom-footer :title="data.about.name"/>
   </div>
 </template>
 
