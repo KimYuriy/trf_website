@@ -10,10 +10,13 @@
       :alt="event.name"
       :width="smAndUp ? 300 : 500"
       :src="event.img.url"
+      :style="smAndUp ? {
+        'mask-image': `linear-gradient(to ${index % 2 === 0 ? 'left' : 'right'}, black, transparent)`,
+      } : {}"
     />
     <div
       class="w-100 d-flex flex-column"
-      :class="smAndUp ? `${index % 2 === 0 ? 'align-start' : 'align-end'}` : ''"
+      :class="smAndUp ? `${index % 2 === 0 ? 'align-end' : 'align-start'}` : ''"
     >
       <p
         class="text-h4"

@@ -34,7 +34,7 @@ const emit = defineEmits<{
   background-repeat: no-repeat;
   background-size: cover;
   aspect-ratio: 1 / 1;
-  transform: scale(0.9); /* Уменьшаем на 20% по умолчанию */
+  transform: scale(0.95); /* Уменьшаем на 5% по умолчанию */
   transition: transform 0.3s ease; /* Плавное увеличение при наведении */
 }
 
