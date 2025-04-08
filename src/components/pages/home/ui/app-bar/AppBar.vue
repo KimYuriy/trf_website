@@ -26,7 +26,7 @@
         v-if="!smAndUp"
         class="text-black font-weight-bold"
       >
-        {{ title }}
+        <rich-text :text="title"/>
       </v-app-bar-title>
     </v-app-bar>
     <v-navigation-drawer
@@ -53,6 +53,7 @@
 import { ref } from 'vue';
 import { useDisplay } from 'vuetify';
 import { NavLinks } from '@/components/pages/home/model/nav_links';
+import RichText from '@/components/pages/home/ui/common/RichText.vue';
 
 withDefaults(
   defineProps<{

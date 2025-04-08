@@ -7,7 +7,7 @@
     <v-carousel
       v-model="currentIndex"
       class="mt-4 pa-3"
-      height="425"
+      height="525"
       hide-delimiters
       cycle
       :style="{

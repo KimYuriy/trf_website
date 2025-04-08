@@ -1,6 +1,6 @@
 <template>
   <v-card
-    max-width="400"
+    max-width="500"
     target="_blank"
     :href="album.url"
   >
