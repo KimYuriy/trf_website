@@ -16,7 +16,6 @@
 </template>
 
 <script setup lang="ts">
-import defaultTitle from '@/assets/default/meta/title';
 import RichText from "@/components/pages/home/ui/common/RichText.vue"
 
 withDefaults(
@@ -24,7 +23,7 @@ withDefaults(
     title?: string;
   }>(),
   {
-    title: defaultTitle
+    title: 'Тактикул.РФ'
   }
 );
 </script>

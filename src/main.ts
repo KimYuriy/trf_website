@@ -9,9 +9,6 @@ import * as directives from 'vuetify/directives';
 import { createVuetify } from 'vuetify';
 import { customTheme } from '@/theme/custom_theme';
 import '@/theme/fonts/bahnschrift.css';
-import defaultTitle from '@/assets/default/meta/title';
-
-document.title = defaultTitle;
 
 const vuetify = createVuetify({
   components,

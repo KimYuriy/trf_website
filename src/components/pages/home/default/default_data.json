@@ -12,12 +12,12 @@
             "longDescription": "<p>Классическая Охота на Нежить – это крупное мероприятие, в которое входят дневные и ночные фазы, а стрелки проводят на спортивном объекте до двух суток. Базовый комплект необходимого вооружения тот же, что в классическом тригане – пистолет, ружьё и карабин, а участники выступают в паре. В то же время, существуют как возможность прохождения в одиночку (соло), так и возможность выбора различных по составу снаряжения и вооружения классов.</p><br><p>Сам матч представляет из себя скорее стрелковый квест: отсутствуют ознакомление с упражнениями и формальные брифинги – стрелки знакомятся с обстановкой и своими задачами благодаря художественной составляющей</p>",
             "logo": {
                 "id": -1,
-                "url": "src/assets/default/events/logos/zh.png",
+                "url": "/default/events/logos/zh.png",
                 "position": "center"
             },
             "img": {
                 "id": -1,
-                "url": "src/assets/default/events/images/zh.png"
+                "url": "/default/events/images/zh.png"
             }
         },
         {
@@ -27,12 +27,12 @@
             "longDescription": "<p>Основной используемый вид оружия, диктующий дизайн упражнений - ОООП, поскольку данный цикл рассчитан именно на владельцев этого вида оружия. Однако, практически всегда присутствуют классы, допускающие использование карабинов в пистолетном калибре и арендного короткоствольного нарезного оружия. Матчи Идиси Сикубэ могут проходить как под открытым небом, так и в крытых тирах, а прохождение может быть как в одиночку, так и парным.</p><br><p>Эти соревнования рассчитаны в том числе на новичков, поэтому отличаются скромными требованиями по снаряжению, а упражнения доступны к ознакомлению</p>",
             "logo": {
                 "id": -1,
-                "url": "src/assets/default/events/logos/edc.png",
+                "url": "/default/events/logos/edc.png",
                 "position": "left"
             },
             "img": {
                 "id": -1,
-                "url": "src/assets/default/events/images/edc.jpg"
+                "url": "/default/events/images/edc.jpg"
             }
         },
         {
@@ -42,12 +42,12 @@
             "longDescription": "<p>ДОЧ представляет из себя привычные тактикульные соревнования со всеми вытекающими, но адаптированные для прохождения с двуствольным ружьём. Стрелки, участвующие в открытом классе, могут использовать и другие виды гладкоствольного оружия, однако в таком случае они будут ограничены требованием снаряжать не более двух патронов.</p><br><p>Эти матчи созданы для того, чтобы познакомить с данным видом спорта и максимально заинтересовать в участии самую широкую аудиторию владельцев гражданского оружия в России. Тем не менее, эти мероприятия нередко привлекают и опытных стрелков, поскольку по своему содержанию и стилю прохождения выбиваются из привычных, классических стрелковых матчей, что безусловно даёт развитие стрелкового мастерства</p>",
             "logo": {
                 "id": -1,
-                "url": "src/assets/default/events/logos/dvudulka.png",
+                "url": "/default/events/logos/dvudulka.png",
                 "position": "top"
             },
             "img": {
                 "id": -1,
-                "url": "src/assets/default/events/images/dvudulka.jpg"
+                "url": "/default/events/images/dvudulka.jpg"
             }
         },
         {
@@ -57,12 +57,12 @@
             "longDescription": "Наполненные позитивным настроением, юмором и разнообразными отсылками к актуальным масс-медиа парные соревнования. Дизайн упражнений напоминает Охоту на Нежить, но упрощён для начинающих стрелков: обычно включает лишь дневную фазу, позволяет ознакомиться с упражнением, а поставленные задачи облегчены, как и список необходимого снаряжения",
             "logo": {
                 "id": -1,
-                "url": "src/assets/default/events/logos/rus.png",
+                "url": "/default/events/logos/rus.png",
                 "position": "right"
             },
             "img": {
                 "id": -1,
-                "url": "src/assets/default/events/images/rus.jpg"
+                "url": "/default/events/images/rus.jpg"
             }
         }
     ],
@@ -73,12 +73,12 @@
             "description": "28.09.2024, Ладожский Стрелковый Центр",
             "logo": {
                 "id": -1,
-                "url": "src/assets/default/gallery/cover/edc.jpg"
+                "url": "/default/gallery/cover/edc.jpg"
             },
             "url": "https://vk.com/album-154470703_306847531",
             "background": {
                 "id": -1,
-                "url": "src/assets/default/gallery/background/edc.jpg"
+                "url": "/default/gallery/background/edc.jpg"
             }
         },
         {
@@ -87,12 +87,12 @@
             "description": "23-24.12.2023, ССК \"Невский\"",
             "logo": {
                 "id": -1,
-                "url": "src/assets/default/gallery/cover/dvudulka.jpg"
+                "url": "/default/gallery/cover/dvudulka.jpg"
             },
             "url": "https://vk.com/album-154470703_303031399",
             "background": {
                 "id": -1,
-                "url": "src/assets/default/gallery/background/dvudulka.jpg"
+                "url": "/default/gallery/background/dvudulka.jpg"
             }
         },
         {
@@ -101,12 +101,12 @@
             "description": "17-20.10.2024, ССК \"Невский\"",
             "logo": {
                 "id": -1,
-                "url": "src/assets/default/gallery/cover/zh.jpg"
+                "url": "/default/gallery/cover/zh.jpg"
             },
             "url": "https://vk.com/album-154470703_307125704",
             "background": {
                 "id": -1,
-                "url": "src/assets/default/gallery/background/zh.jpg"
+                "url": "/default/gallery/background/zh.jpg"
             }
         },
         {
@@ -115,12 +115,12 @@
             "description": "06-09.02.2025, ССК \"Невский\"",
             "logo": {
                 "id": -1,
-                "url": "src/assets/default/gallery/cover/rus.jpg"
+                "url": "/default/gallery/cover/rus.jpg"
             },
             "url": "https://vk.com/album-154470703_308588053",
             "background": {
                 "id": -1,
-                "url": "src/assets/default/gallery/background/rus.jpg"
+                "url": "/default/gallery/background/rus.jpg"
             }
         }
     ],
@@ -131,7 +131,7 @@
             "description": "Крупнейший стрелковый объект Санкт-Петербурга и Ленинградской области",
             "logo": {
                 "id": -1,
-                "url": "src/assets/default/partners/nevskiy.png"
+                "url": "/default/partners/nevskiy.png"
             },
             "url": "https://ipsc-nevskiy.ru/"
         },
@@ -141,7 +141,7 @@
             "description": "Стрелковая команда из Санкт-Петербурга",
             "logo": {
                 "id": -1,
-                "url": "src/assets/default/partners/uc.png"
+                "url": "/default/partners/uc.png"
             },
             "url": "https://vk.com/utilizationcrew"
         },
@@ -151,7 +151,7 @@
             "description": "Единое торгово-информационное пространство для всех, кто стреляет или желает начать стрелять",
             "logo": {
                 "id": -1,
-                "url": "src/assets/default/partners/line_f.png"
+                "url": "/default/partners/line_f.png"
             },
             "url": "https://line-f.ru/"
         },
@@ -161,7 +161,7 @@
             "description": "Современное тактическое снаряжение и одежда",
             "logo": {
                 "id": -1,
-                "url": "src/assets/default/partners/arsarma.png"
+                "url": "/default/partners/arsarma.png"
             },
             "url": "https://www.arsarma.ru/"
         }
@@ -173,7 +173,7 @@
             "description": "Telegram-канал объединения \"Тактикул.РФ\" - актуальная информация, анонсы событий, мероприятий, видеоролики и многое другое",
             "logo": {
                 "id": -1,
-                "url": "src/assets/default/social/tacticul.png"
+                "url": "/default/social/tacticul.png"
             },
             "url": "https://t.me/tacticool_rf"
         },
@@ -183,7 +183,7 @@
             "description": "Telegram-канал, посвящённый соревнованиям из цикла \"Zombie Hunting\"",
             "logo": {
                 "id": -1,
-                "url": "src/assets/default/social/zh.png"
+                "url": "/default/social/zh.png"
             },
             "url": "https://t.me/ZombieHunting"
         },
@@ -193,7 +193,7 @@
             "description": "Группа \"Zombie Hunting\" в социальной сети \"ВКонтакте\"",
             "logo": {
                 "id": -1,
-                "url": "src/assets/default/social/vk.jpeg"
+                "url": "/default/social/vk.jpeg"
             },
             "url": "https://vk.com/zombie_hunting"
         },
@@ -203,7 +203,7 @@
             "description": "Объединение гражданских стрелков с шикарными фотографиями с тренировок и соревнований",
             "logo": {
                 "id": -1,
-                "url": "src/assets/default/social/uc.jpg"
+                "url": "/default/social/uc.jpg"
             },
             "url": "https://vk.com/utilizationcrew"
         }
@@ -215,7 +215,7 @@
             "description": "<p>Основатель объединения \"Тактикул.РФ\"</p><p>Дизайнер матчей. Автор идеи Zombie Hunting и идейный вдохновитель стрелкового сообщества Санкт-Петербурга</p><br><a href=\"https://t.me/SvinkaPapa\" target=\"_blank\">Telegram</a>",
             "logo": {
                 "id": -1,
-                "url": "src/assets/default/contacts/kav.png"
+                "url": "/default/contacts/kav.png"
             },
             "url": "https://t.me/SvinkaPapa"
         },
@@ -225,7 +225,7 @@
             "description": "<p>Основатель объединения \"Тактикул.РФ\"</p><p>Дизайнер матчей. Автор идеи \"Пращуры против Ящеров\" и \"Идиси Сикубэ\". Представитель команды Utilization Crew</p><br><a href=\"https://t.me/alXga_lf\" target=\"_blank\">Telegram</a>",
             "logo": {
                 "id": -1,
-                "url": "src/assets/default/contacts/gai.png"
+                "url": "/default/contacts/gai.png"
             },
             "url": "https://t.me/alXga_lf"
         }

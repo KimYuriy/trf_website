@@ -11,7 +11,7 @@
 
 <style scoped>
 .bg {
-  background: url('src/assets/images/background.jpg');
+  background: url('/images/background.jpg');
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
