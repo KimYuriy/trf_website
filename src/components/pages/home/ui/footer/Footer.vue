@@ -1,11 +1,11 @@
 <template>
-  <v-footer class="bg-red">
+  <v-footer class="bg-transparent">
     <v-row
       justify="center"
       no-gutters
     >
       <v-col
-        class="text-center text-black text-uppercase my-2"
+        class="text-center text-white text-uppercase my-2"
         cols="12"
       >
         <b><rich-text :text="title"/></b>
