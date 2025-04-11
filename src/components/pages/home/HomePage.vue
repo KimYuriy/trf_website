@@ -57,7 +57,7 @@ import Contacts from '@/components/pages/home/ui/contacts/Contacts.vue';
 import CustomFooter from '@/components/pages/home/ui/footer/Footer.vue';
 import AboutOrganizationNEvents from '@/components/pages/home/ui/about-org-n-events/AboutOrganizationNEvents.vue';
 
-const { smAndUp, xlAndUp } = useDisplay();
+const { smAndUp, xlAndDown } = useDisplay();
 
 const data = ref<AllDataModel>(AllDataModel.default());
 
@@ -86,7 +86,7 @@ onBeforeMount(async () => {
 });
 
 const contentWidth = computed<string>(() => {
-  if (xlAndUp.value) {
+  if (!xlAndDown.value) {
     return 'w-33';
   }
   if (smAndUp.value) {
