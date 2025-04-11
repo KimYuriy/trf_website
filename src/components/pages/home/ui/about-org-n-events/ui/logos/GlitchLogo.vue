@@ -19,7 +19,6 @@
 import type { EventModel } from '@/components/pages/home/model/all_data';
 
 defineProps<{
-  tooltipLocation: 'top' | 'bottom' | 'start' | 'end';
   event: EventModel | undefined;
 }>();
 

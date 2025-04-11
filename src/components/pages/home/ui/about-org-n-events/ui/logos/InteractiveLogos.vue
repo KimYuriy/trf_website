@@ -6,7 +6,6 @@
     >
       <v-col cols="3">
         <glitch-logo
-          tooltip-location="end"
           :event="events.find(event => event.logo.position === 'top')"
           @event-clicked="(id: number) => emit('eventClicked', id)"
         />
@@ -18,7 +17,6 @@
       >
         <v-col cols="3">
           <glitch-logo
-            tooltip-location="top"
             :event="events.find(event => event.logo.position === 'left')"
             @event-clicked="(id: number) => emit('eventClicked', id)"
           />
@@ -28,14 +26,12 @@
           cols="5"
         >
           <glitch-logo
-            tooltip-location="bottom"
             :event="events.find(event => event.logo.position === 'center')"
             @event-clicked="(id: number) => emit('eventClicked', id)"
           />
         </v-col>
         <v-col cols="3">
           <glitch-logo
-            tooltip-location="top"
             :event="events.find(event => event.logo.position === 'right')"
             @event-clicked="(id: number) => emit('eventClicked', id)"
           />
