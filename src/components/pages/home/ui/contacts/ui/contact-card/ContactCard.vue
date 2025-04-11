@@ -20,7 +20,10 @@
       >
         <rich-text :text="contact.name" />
       </p>
-      <p class="text-h6 text-justify">
+      <p
+        class="text-h6 text-justify"
+        :class="{ 'mt-3': !smAndUp }"
+      >
         <rich-text :text="contact.description" />
       </p>
     </div>

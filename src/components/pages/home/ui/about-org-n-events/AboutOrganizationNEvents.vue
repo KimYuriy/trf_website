@@ -21,7 +21,7 @@
           />
         </v-col>
       </v-row>
-      <v-card-text class="mt-5 text-h6 text-justify">
+      <v-card-text class="mt-2 text-h6 text-justify">
         <rich-text :text="info.description" />
       </v-card-text>
     </div>

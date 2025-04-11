@@ -1,3 +1,3 @@
-const ipAddress = 'http://62.109.21.99/api';
+const ipAddress = 'http://xn--80aqfbf1bck.xn--p1ai/api';
 
 export default ipAddress;

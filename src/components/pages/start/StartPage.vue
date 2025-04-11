@@ -39,15 +39,19 @@ const systemText = ref<string | undefined>(undefined);
 onBeforeMount(async () => {
   loadingApi.getStatus()
     .then((data) => {
-      if (data.isAvailable) {
-        sessionStorage.setItem('navigation.home', 'true');
-        router.replace('/home');
-      } else {
-        try {
-          systemText.value = data.description;
-        } catch {
-          systemText.value = 'В разработке';
+      try {
+        if (data.isAvailable) {
+          sessionStorage.setItem('navigation.home', 'true');
+          router.replace('/home');
+        } else {
+          try {
+            systemText.value = data.description;
+          } catch {
+            systemText.value = 'В разработке';
+          }
         }
+      } catch (_) {
+        systemText.value = 'Ошибка загрузки данных. Пожалуйста, попробуйте позднее';
       }
     })
     .catch(() => systemText.value = 'Ошибка загрузки данных. Пожалуйста, попробуйте позднее');

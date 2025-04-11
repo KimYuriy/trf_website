@@ -127,6 +127,16 @@
     "partners": [
         {
             "id": 0,
+            "name": "СФПССПБ",
+            "description": "Региональная спортивная общественная организация \"СПОРТИВНАЯ ФЕДЕРАЦИЯ ПРАКТИЧЕСКОЙ СТРЕЛЬБЫ САНКТ-ПЕТЕРБУРГА\"",
+            "logo": {
+                "id": -1,
+                "url": "/default/partners/sfprspb.png"
+            },
+            "url": "https://ipsc78.ru/"
+        },
+        {
+            "id": 0,
             "name": "ССК \"Невский\"",
             "description": "Крупнейший стрелковый объект Санкт-Петербурга и Ленинградской области",
             "logo": {
@@ -147,16 +157,6 @@
         },
         {
             "id": 0,
-            "name": "Линия Огня",
-            "description": "Единое торгово-информационное пространство для всех, кто стреляет или желает начать стрелять",
-            "logo": {
-                "id": -1,
-                "url": "/default/partners/line_f.png"
-            },
-            "url": "https://line-f.ru/"
-        },
-        {
-            "id": 0,
             "name": "Ars Arma",
             "description": "Современное тактическое снаряжение и одежда",
             "logo": {
@@ -164,6 +164,16 @@
                 "url": "/default/partners/arsarma.png"
             },
             "url": "https://www.arsarma.ru/"
+        },
+        {
+            "id": 0,
+            "name": "Линия Огня",
+            "description": "Единое торгово-информационное пространство для всех, кто стреляет или желает начать стрелять",
+            "logo": {
+                "id": -1,
+                "url": "/default/partners/line_f.png"
+            },
+            "url": "https://line-f.ru/"
         }
     ],
     "socialmedias": [
@@ -228,6 +238,16 @@
                 "url": "/default/contacts/gai.png"
             },
             "url": "https://t.me/alXga_lf"
+        },
+        {
+            "id": 0,
+            "name": "St1ch",
+            "description": "Станислав aka St1ch - основатель Тактикул.РФ, автор идеи Двудулочка Оператор Челлендж. Специалист по продвижению проекта",
+            "logo": {
+                "id": -1,
+                "url": "/default/contacts/bsa.png"
+            },
+            "url": "https://t.me/shawarma_unicorn"
         }
     ]
 }
