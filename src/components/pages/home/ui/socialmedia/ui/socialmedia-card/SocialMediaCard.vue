@@ -1,7 +1,7 @@
 <template>
   <v-card
-    class="my-5 d-flex"
-    :class="smAndUp ? '' : 'flex-column align-center'"
+    class="my-5 d-flex align-center"
+    :class="{ 'flex-column': !smAndUp }"
     variant="text"
     rounded="0"
     target="blank"
@@ -19,7 +19,10 @@
       >
         <rich-text :text="media.name" />
       </p>
-      <p class="text-body-1 text-justify">
+      <p
+        v-if="media.description.length"
+        class="text-body-1 text-justify"
+      >
         <rich-text :text="media.description" />
       </p>
     </div>

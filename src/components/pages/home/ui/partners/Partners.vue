@@ -4,13 +4,6 @@
     fluid
   >
     <custom-title text="Партнёры" />
-    <!-- <v-row class="mt-5 ga-10 align-center justify-center">
-      <partner-card
-        v-for="partner in partners"
-        :partner="partner"
-      />
-    </v-row> -->
-
     <v-slide-group
       class="mt-5"
       center-active
@@ -24,7 +17,6 @@
         />
       </v-slide-group-item>
     </v-slide-group>
-
   </v-container>
 </template>
 
