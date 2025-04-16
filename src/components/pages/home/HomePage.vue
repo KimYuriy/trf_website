@@ -76,13 +76,13 @@ const scrollToSection = (sectionId: string) => {
 };
 
 onBeforeMount(async () => {
-  // homeApi.getContent()
-  //   .then((response) => {
-  //     data.value = new AllDataModel(response); 
-  //   })
-  //   .catch(() => {
-  //     data.value = AllDataModel.default();
-  //   });
+  homeApi.getContent()
+    .then((response) => {
+      data.value = new AllDataModel(response); 
+    })
+    .catch(() => {
+      data.value = AllDataModel.default();
+    });
 });
 
 const contentWidth = computed<string>(() => {
