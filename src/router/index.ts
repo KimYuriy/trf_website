@@ -23,6 +23,9 @@ const routes = [
   {
     path: '/:catchAll(.*)',
     component: NoSuchPage,
+    beforeEnter: (to, from, next) => {
+      next(to.path === '/admin' ? '/no-such-page' : null);
+    }
   },
 ];
 
