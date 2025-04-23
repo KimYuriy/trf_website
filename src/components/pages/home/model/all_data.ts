@@ -125,36 +125,36 @@ export class PhotoAlbumModel {
 
 export class AllDataModel {
   constructor(json: IAllData) {
-    // this.about = new AboutModel(json.about);
-    // this.events = json.events.map(event => new EventModel(event));
-    // this.gallery = json.gallery.map(album => new PhotoAlbumModel(album));
-    // this.partners = json.partners.map(partner => new DataModel(partner));
-    // this.socialmedias = json.socialmedias.map(social => new DataModel(social));
-    // this.contacts = json.contacts.map(contact => new DataModel(contact));
+    this.about = new AboutModel(json.about);
+    this.events = json.events.map(event => new EventModel(event));
+    this.gallery = json.gallery.map(album => new PhotoAlbumModel(album));
+    this.partners = json.partners.map(partner => new DataModel(partner));
+    this.socialmedias = json.socialmedias.map(social => new DataModel(social));
+    this.contacts = json.contacts.map(contact => new DataModel(contact));
 
-    const jsonByDefault = defaultJson as IAllData;
+    // const jsonByDefault = defaultJson as IAllData;
 
-    this.about = new AboutModel(json.about ?? jsonByDefault.about);
+    // this.about = new AboutModel(json.about ?? jsonByDefault.about);
 
-    this.events = json.events.length
-      ? json.events.map(event => new EventModel(event))
-      : jsonByDefault.events.map(event => new EventModel(event));
+    // this.events = json.events.length
+    //   ? json.events.map(event => new EventModel(event))
+    //   : jsonByDefault.events.map(event => new EventModel(event));
 
-    this.gallery = json.gallery.length
-      ? json.gallery.map(album => new PhotoAlbumModel(album))
-      : jsonByDefault.gallery.map(album => new PhotoAlbumModel(album));
+    // this.gallery = json.gallery.length
+    //   ? json.gallery.map(album => new PhotoAlbumModel(album))
+    //   : jsonByDefault.gallery.map(album => new PhotoAlbumModel(album));
 
-    this.partners = json.partners.length
-      ? json.partners.map(partner => new DataModel(partner))
-      : jsonByDefault.partners.map(partner => new DataModel(partner));
+    // this.partners = json.partners.length
+    //   ? json.partners.map(partner => new DataModel(partner))
+    //   : jsonByDefault.partners.map(partner => new DataModel(partner));
 
-    this.socialmedias = json.socialmedias.length
-      ? json.socialmedias.map(social => new DataModel(social))
-      : jsonByDefault.socialmedias.map(social => new DataModel(social));
+    // this.socialmedias = json.socialmedias.length
+    //   ? json.socialmedias.map(social => new DataModel(social))
+    //   : jsonByDefault.socialmedias.map(social => new DataModel(social));
 
-    this.contacts = json.contacts.length
-      ? json.contacts.map(contact => new DataModel(contact))
-      : jsonByDefault.contacts.map(contact => new DataModel(contact));
+    // this.contacts = json.contacts.length
+    //   ? json.contacts.map(contact => new DataModel(contact))
+    //   : jsonByDefault.contacts.map(contact => new DataModel(contact));
   }
 
   public static default = (): AllDataModel => new AllDataModel(defaultJson as IAllData);

@@ -81,7 +81,7 @@ onBeforeMount(async () => {
       data.value = new AllDataModel(response); 
     })
     .catch(() => {
-      data.value = AllDataModel.default();
+      // data.value = AllDataModel.default();
     });
 });
 
