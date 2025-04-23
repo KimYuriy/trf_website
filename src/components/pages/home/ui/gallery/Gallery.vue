@@ -23,7 +23,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue';
+import { onMounted, ref, watch } from 'vue';
 import type { PhotoAlbumModel } from '@/components/pages/home/model/all_data';
 import AlbumCard from '@/components/pages/home/ui/gallery/ui/AlbumCard.vue';
 import CustomTitle from '@/components/pages/home/ui/common/CustomTitle.vue';
@@ -42,4 +42,6 @@ watch(
     backgroundImageUrl.value = props.albums[currentIndex.value].background.url;
   }
 );
+
+onMounted(() => backgroundImageUrl.value = props.albums[0].background.url);
 </script>

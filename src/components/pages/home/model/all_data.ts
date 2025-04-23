@@ -140,7 +140,9 @@ export class AllDataModel {
       ? json.events.map(event => new EventModel(event))
       : jsonByDefault.events.map(event => new EventModel(event));
 
-    this.gallery = json.gallery.map(album => new PhotoAlbumModel(album));
+    this.gallery = json.gallery.length
+      ? json.gallery.map(album => new PhotoAlbumModel(album))
+      : jsonByDefault.gallery.map(album => new PhotoAlbumModel(album));
 
     this.partners = json.partners.length
       ? json.partners.map(partner => new DataModel(partner))
