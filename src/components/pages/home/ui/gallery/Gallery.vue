@@ -43,5 +43,5 @@ watch(
   }
 );
 
-onMounted(() => backgroundImageUrl.value = props.albums[0].background.url);
+onMounted(() => currentIndex.value++);
 </script>
