@@ -36,7 +36,7 @@ defineProps<{
   index: number;
 }>();
 
-const cardWidth = ref<number>(200);
+const cardWidth = ref<number>(250);
 </script>
 
 <style scoped>
