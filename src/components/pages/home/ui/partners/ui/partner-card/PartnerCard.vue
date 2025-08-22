@@ -33,7 +33,6 @@ import RichText from '@/components/pages/home/ui/common/RichText.vue';
 
 defineProps<{
   partner: DataModel;
-  index: number;
 }>();
 
 const cardWidth = ref<number>(250);
